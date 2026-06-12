@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Costos Sommer Quiz | Clínica Somer S.A.</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     SCREEN: INICIO
+═══════════════════════════════════════════ -->
+<div id="screen-start" class="screen active">
+  <div class="start-bg-grid"></div>
+  <div class="start-bg-pulse"></div>
+
+  <header class="start-header">
+    <div class="logo-area">
+      <div class="logo-cross">✚</div>
+      <div class="logo-text">
+        <span class="logo-main">CLÍNICA SOMER</span>
+        <span class="logo-sub">S.A. · Rionegro, Antioquia · Fundada 1985</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn-ghost" id="btn-go-dashboard">
+        <span>📊</span> Progreso
+      </button>
+      <button class="btn-ghost" id="btn-go-learning">
+        <span>📚</span> Aprendizaje
+      </button>
+    </div>
+  </header>
+
+  <main class="start-main">
+    <div class="start-card">
+      <div class="game-title-block">
+        <h1 class="game-title">
+          <span class="t-costos">COSTOS</span>
+          <span class="t-sommer">SOMMER</span>
+          <span class="t-quiz">QUIZ</span>
+        </h1>
+        <p class="game-subtitle">Sistema de Capacitación Gamificada · Área de Costos &amp; Gestión Financiera</p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="player-name">¿Cómo te llamas?</label>
+        <input type="text" id="player-name" class="form-input" placeholder="Tu nombre completo" maxlength="30" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Selecciona un Módulo</label>
+        <div class="module-grid" id="module-grid">
+          <button class="module-chip active" data-module="all">⊕ Modo Mixto</button>
+          <button class="module-chip" data-module="Costos hospitalarios">📋 Costos y Clasificación</button>
+          <button class="module-chip" data-module="Presupuesto">📊 Presupuesto</button>
+          <button class="module-chip" data-module="Indicadores">📈 KPIs</button>
+          <button class="module-chip" data-module="Costeo ABC">🔢 Costeo ABC</button>
+          <button class="module-chip" data-module="Normativa">⚖️ Normativa</button>
+          <button class="module-chip" data-module="Contabilidad">📒 Contabilidad</button>
+          <button class="module-chip" data-module="Caso integral">🏥 Casos Integrales</button>
+          <button class="module-chip" data-module="Fórmulas">🧮 Fórmulas</button>
+          <button class="module-chip" data-module="Criterio profesional">🎯 Criterio Profesional</button>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group half">
+          <label class="form-label">Dificultad</label>
+          <div class="pill-group" id="difficulty-group">
+            <button class="pill active" data-val="all">Mixto</button>
+            <button class="pill" data-val="basico">Básico</button>
+            <button class="pill" data-val="intermedio">Intermedio</button>
+            <button class="pill" data-val="avanzado">Avanzado</button>
+          </div>
+        </div>
+        <div class="form-group half">
+          <label class="form-label">Modo de Juego</label>
+          <div class="pill-group" id="mode-group">
+            <button class="pill active" data-val="practice">🎮 Práctica</button>
+            <button class="pill" data-val="exam">📝 Examen Final</button>
+            <button class="pill" data-val="review">🔁 Repasar Errores</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-start" id="btn-start">
+        <span class="btn-start-text">Iniciar Quiz</span>
+        <span class="btn-start-arrow">→</span>
+      </button>
+    </div>
+
+    <div class="start-side">
+      <div class="rank-display" id="start-rank">
+        <div class="rank-crown">👑</div>
+        <div class="rank-name" id="start-rank-name">Auxiliar de Costos</div>
+        <div class="rank-score" id="start-rank-score">0 pts</div>
+        <div class="rank-bar-wrap">
+          <div class="rank-bar" id="start-rank-bar" style="width:0%"></div>
+        </div>
+        <div class="rank-next" id="start-rank-next">Próximo: Analista Junior</div>
+      </div>
+
+      <div class="quick-stats" id="quick-stats">
+        <div class="qs-item"><span class="qs-val" id="qs-sessions">0</span><span class="qs-lbl">Sesiones</span></div>
+        <div class="qs-item"><span class="qs-val" id="qs-accuracy">—</span><span class="qs-lbl">Precisión</span></div>
+        <div class="qs-item"><span class="qs-val" id="qs-badges">0</span><span class="qs-lbl">Insignias</span></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SCREEN: QUIZ
+═══════════════════════════════════════════ -->
+<div id="screen-quiz" class="screen">
+  <header class="quiz-header">
+    <div class="qh-left">
+      <button class="btn-icon-sm" id="btn-quit">✕</button>
+      <div class="quiz-module-label" id="quiz-module-label">Módulo</div>
+    </div>
+    <div class="qh-center">
+      <div class="score-wrap">
+        <span class="score-pts" id="score-pts">0</span>
+        <span class="score-lbl">pts</span>
+      </div>
+      <div class="combo-wrap" id="combo-wrap">
+        <span class="combo-x">×</span><span class="combo-val" id="combo-val">1</span>
+      </div>
+    </div>
+    <div class="qh-right">
+      <div class="lives-wrap" id="lives-wrap">
+        <span class="heart" id="h1">♥</span>
+        <span class="heart" id="h2">♥</span>
+        <span class="heart" id="h3">♥</span>
+      </div>
+      <div class="timer-wrap" id="timer-wrap" style="display:none">
+        <span id="timer-val">2:00:00</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="quiz-progress-track">
+    <div class="quiz-progress-fill" id="qpf"></div>
+    <span class="quiz-progress-label" id="qpl">1 / 10</span>
+  </div>
+
+  <main class="quiz-body">
+    <div class="question-card" id="question-card">
+      <div class="q-meta">
+        <span class="q-num" id="q-num">P1</span>
+        <span class="q-type" id="q-type">Concepto</span>
+        <span class="q-diff" id="q-diff">Básico</span>
+        <span class="q-module-tag" id="q-module-tag">—</span>
+      </div>
+      <div class="q-text" id="q-text">Cargando pregunta...</div>
+      <div class="options-wrap" id="options-wrap">
+        <button class="opt-btn" data-opt="A"><span class="opt-letter">A</span><span class="opt-text" id="opt-A">—</span></button>
+        <button class="opt-btn" data-opt="B"><span class="opt-letter">B</span><span class="opt-text" id="opt-B">—</span></button>
+        <button class="opt-btn" data-opt="C"><span class="opt-letter">C</span><span class="opt-text" id="opt-C">—</span></button>
+        <button class="opt-btn" data-opt="D"><span class="opt-letter">D</span><span class="opt-text" id="opt-D">—</span></button>
+      </div>
+      <div class="speed-bar-wrap">
+        <div class="speed-bar" id="speed-bar"></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SCREEN: FEEDBACK (overlay)
+═══════════════════════════════════════════ -->
+<div id="screen-feedback" class="screen overlay-screen" style="display:none">
+  <div class="feedback-backdrop" id="feedback-backdrop"></div>
+  <div class="feedback-panel" id="feedback-panel">
+    <div class="fb-header" id="fb-header">
+      <div class="fb-icon" id="fb-icon">✓</div>
+      <div class="fb-title" id="fb-title">¡Correcto!</div>
+      <div class="fb-pts" id="fb-pts">+10 pts</div>
+    </div>
+
+    <div class="fb-body">
+      <div class="fb-correct-box" id="fb-correct-box"></div>
+
+      <div class="fb-section" id="fbs-justification">
+        <div class="fb-section-label">¿Por qué es la respuesta correcta?</div>
+        <p class="fb-justification" id="fb-justification"></p>
+      </div>
+
+      <div class="fb-section fb-error-section" id="fbs-error" style="display:none">
+        <div class="fb-section-label error-lbl">Tu respuesta: por qué es un error frecuente</div>
+        <p class="fb-error-text" id="fb-error-text"></p>
+      </div>
+
+      <div class="fb-section" id="fbs-procedure" style="display:none">
+        <div class="fb-section-label calc-lbl">Procedimiento paso a paso</div>
+        <div class="fb-steps" id="fb-steps"></div>
+      </div>
+
+      <div class="fb-tip" id="fb-tip" style="display:none"></div>
+    </div>
+
+    <button class="btn-continue" id="btn-continue">
+      Siguiente <span>→</span>
+    </button>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SCREEN: RESULTADOS
+═══════════════════════════════════════════ -->
+<div id="screen-results" class="screen">
+  <div class="results-wrap">
+    <div class="results-card">
+      <h2 class="results-title" id="results-title">Sesión Completada</h2>
+
+      <div class="stars-row" id="stars-row">
+        <span class="star-lg" id="sr-1">☆</span>
+        <span class="star-lg" id="sr-2">☆</span>
+        <span class="star-lg" id="sr-3">☆</span>
+      </div>
+
+      <div class="results-grid" id="results-grid"></div>
+
+      <div class="results-badges-unlock" id="rbu" style="display:none">
+        <h3>Logros Desbloqueados</h3>
+        <div class="rbu-badges" id="rbu-badges"></div>
+      </div>
+
+      <div class="results-actions">
+        <button class="btn-start" id="ra-play-again">Jugar de Nuevo</button>
+        <button class="btn-secondary" id="ra-review" style="display:none">🔁 Repasar Errores</button>
+        <button class="btn-secondary" id="ra-dashboard">Ver Progreso</button>
+        <button class="btn-ghost btn-sm" id="ra-home">← Inicio</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SCREEN: DASHBOARD
+═══════════════════════════════════════════ -->
+<div id="screen-dashboard" class="screen">
+  <header class="page-header">
+    <button class="btn-icon-sm" id="btn-db-back">←</button>
+    <h2>Panel de Progreso</h2>
+    <div class="ph-rank" id="ph-rank">Auxiliar</div>
+  </header>
+
+  <div class="dash-container">
+    <div class="dash-overview">
+      <div class="do-card accent-gold">
+        <div class="do-val" id="do-total">0</div>
+        <div class="do-lbl">Puntos Totales</div>
+      </div>
+      <div class="do-card accent-blue">
+        <div class="do-val" id="do-accuracy">—</div>
+        <div class="do-lbl">Precisión Global</div>
+      </div>
+      <div class="do-card accent-green">
+        <div class="do-val" id="do-sessions">0</div>
+        <div class="do-lbl">Sesiones</div>
+      </div>
+      <div class="do-card accent-purple">
+        <div class="do-val" id="do-badges">0</div>
+        <div class="do-lbl">Insignias</div>
+      </div>
+    </div>
+
+    <div class="dash-section">
+      <h3>Nivel Profesional</h3>
+      <div class="rank-progress-card">
+        <div class="rpc-rank" id="rpc-rank">Auxiliar de Costos</div>
+        <div class="rpc-bar-wrap">
+          <div class="rpc-bar" id="rpc-bar" style="width:0%"></div>
+        </div>
+        <div class="rpc-labels">
+          <span>Auxiliar</span>
+          <span>Junior</span>
+          <span>Analista</span>
+          <span>Senior</span>
+          <span>Jefe</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dash-section">
+      <h3>Desempeño por Módulo</h3>
+      <div class="module-bars-wrap" id="module-bars-wrap"></div>
+    </div>
+
+    <div class="dash-section" id="weak-section" style="display:none">
+      <h3>⚠️ Módulos para Reforzar (&lt;70%)</h3>
+      <div class="weak-chips" id="weak-chips"></div>
+    </div>
+
+    <div class="dash-section">
+      <h3>Insignias</h3>
+      <div class="badges-wall" id="badges-wall"></div>
+    </div>
+
+    <div class="dash-section">
+      <h3>Historial de Sesiones</h3>
+      <div class="session-log" id="session-log">
+        <div class="no-data">No hay sesiones registradas aún.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     SCREEN: CENTRO DE APRENDIZAJE
+═══════════════════════════════════════════ -->
+<div id="screen-learning" class="screen">
+  <header class="page-header">
+    <button class="btn-icon-sm" id="btn-lrn-back">←</button>
+    <h2>Centro de Aprendizaje</h2>
+  </header>
+
+  <div class="lrn-container">
+    <div class="lrn-tabs" id="lrn-tabs">
+      <button class="ltab active" data-tab="formulas">🧮 Fórmulas</button>
+      <button class="ltab" data-tab="m1">Costos</button>
+      <button class="ltab" data-tab="m2">Presupuesto</button>
+      <button class="ltab" data-tab="m3">KPIs</button>
+      <button class="ltab" data-tab="m4">ABC</button>
+      <button class="ltab" data-tab="m5">Normativa</button>
+      <button class="ltab" data-tab="m6">Contabilidad</button>
+      <button class="ltab" data-tab="glosario">Glosario</button>
+    </div>
+
+    <div class="lrn-content">
+      <!-- TAB: Fórmulas -->
+      <div class="ltab-panel active" id="ltp-formulas">
+        <div class="formula-card">
+          <div class="fc-badge">Fórmula 1</div>
+          <h3 class="fc-title">Porcentaje de Participación</h3>
+          <div class="fc-formula">% Participación = (Valor del Ítem ÷ Total) × 100</div>
+          <p class="fc-desc">Mide qué proporción representa un elemento sobre el total. Se usa para analizar la estructura de costos por servicio o sede.</p>
+          <div class="fc-example">
+            <div class="fce-label">Ejemplo — Clínica Somer</div>
+            Personal asistencial: $2.400M de costo total $6.000M<br>
+            <strong>% = (2.400 ÷ 6.000) × 100 = 40%</strong><br>
+            El personal representa el 40% del costo total de la institución.
+          </div>
+        </div>
+
+        <div class="formula-card">
+          <div class="fc-badge">Fórmula 2</div>
+          <h3 class="fc-title">Punto de Equilibrio</h3>
+          <div class="fc-formula">PE (unidades) = Costos Fijos ÷ (Precio − CVU)<br>
+          PE ($) = Costos Fijos ÷ % Margen de Contribución</div>
+          <p class="fc-desc">Nivel de actividad donde los ingresos cubren exactamente los costos totales (utilidad = 0). Por debajo hay pérdida; por encima hay utilidad.</p>
+          <div class="fc-example">
+            <div class="fce-label">Ejemplo — UCI Adultos Somer</div>
+            CF = $72.000.000 | P = $900.000 | CVU = $180.000<br>
+            MC = $900.000 − $180.000 = $720.000<br>
+            <strong>PE = 72.000.000 ÷ 720.000 = 100 días-UCI</strong>
+          </div>
+        </div>
+
+        <div class="formula-card">
+          <div class="fc-badge">Fórmula 3</div>
+          <h3 class="fc-title">Peso / Costo Ponderado</h3>
+          <div class="fc-formula">C. Ponderado = Σ(Costo_i × Volumen_i) ÷ Σ(Volumen_i)</div>
+          <p class="fc-desc">Promedio que asigna mayor importancia a los valores con mayor volumen. Se usa para calcular tarifas o costos promedio entre servicios o pagadores.</p>
+          <div class="fc-example">
+            <div class="fce-label">Ejemplo — Contratos EPS Somer</div>
+            EPS A: 600 servicios × $450.000 = $270.000.000<br>
+            EPS B: 400 servicios × $380.000 = $152.000.000<br>
+            <strong>C. Ponderado = ($270M + $152M) ÷ 1.000 = $422.000</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: Módulo 1 -->
+      <div class="ltab-panel" id="ltp-m1">
+        <h3 class="ltp-title">Costos Hospitalarios y Clasificación</h3>
+        <div class="concept-grid">
+          <div class="concept-card"><h4>Costos Directos</h4><p>Identificables con un servicio específico: medicamentos, instrumental quirúrgico, material de sutura, kits de trasplante.</p></div>
+          <div class="concept-card"><h4>Costos Indirectos (CIF)</h4><p>No asignables directamente: depreciación de equipos compartidos, esterilización, servicios públicos asistenciales, seguridad.</p></div>
+          <div class="concept-card"><h4>Costos Fijos</h4><p>No varían con el volumen: arrendamiento, seguros, nómina fija del personal. Ej: arrendamiento Sede Ambulatoria Somer.</p></div>
+          <div class="concept-card"><h4>Costos Variables</h4><p>Cambian con la actividad: insumos por paciente, medicamentos, reactivos. Ej: surfactante UCI Neonatal por recién nacido.</p></div>
+          <div class="concept-card"><h4>3 Elementos del Costo</h4><p>1. Materia prima directa (medicamentos, kits), 2. Mano de obra directa (personal asistencial), 3. CIF. Suma = costo total del servicio.</p></div>
+          <div class="concept-card"><h4>PUC Circular 030</h4><p>Clase 6 (costos): 6205 personal, 6210 honorarios médicos, 6215 insumos, 6250 depreciación. Clase 5 (gastos): 5105 admin, 5120 honorarios externos.</p></div>
+          <div class="concept-card"><h4>Costo vs Gasto</h4><p>Costo: ligado a la prestación asistencial → Clase 6. Gasto: administración general → Clase 5. Ambos afectan la utilidad del período.</p></div>
+          <div class="concept-card"><h4>Centro de Costo</h4><p>Unidad que acumula costos para control. Ej en Somer: UCI Adultos, UCI Pediátrica, UCI Neonatal, Banco de Sangre, Laboratorio, Oncología.</p></div>
+        </div>
+      </div>
+
+      <!-- TAB: Módulo 2 -->
+      <div class="ltab-panel" id="ltp-m2">
+        <h3 class="ltp-title">Presupuesto y Control Financiero</h3>
+        <div class="concept-grid">
+          <div class="concept-card"><h4>Punto de Equilibrio</h4><p>CF ÷ MC unitario (unidades) o CF ÷ %MC (pesos). Nivel donde no hay utilidad ni pérdida.</p></div>
+          <div class="concept-card"><h4>Variaciones Presupuestales</h4><p>Costo: favorable si ejecutado &lt; presupuestado. Ingreso: favorable si ejecutado &gt; presupuestado. Variación precio = (Pr-Pe)×Qr. Variación cantidad = (Qr-Qe)×Pe.</p></div>
+          <div class="concept-card"><h4>EBITDA</h4><p>Earnings Before Interest, Taxes, Depreciation &amp; Amortization. Mide rentabilidad operativa pura, sin efectos financieros ni contables no monetarios.</p></div>
+          <div class="concept-card"><h4>Presupuesto Flexible</h4><p>Se ajusta al nivel real de actividad. Permite comparaciones válidas cuando el volumen varía respecto al plan estático.</p></div>
+          <div class="concept-card"><h4>Flujo de Caja</h4><p>Entradas y salidas reales de efectivo. Crítico en Somer: EPS pagan en 90+ días pero insumos se pagan en 30-60 días → brecha de liquidez.</p></div>
+          <div class="concept-card"><h4>Presupuesto Maestro</h4><p>Integra presupuesto operativo (ingresos, costos, gastos) + presupuesto financiero (flujo de caja, balance proyectado, CAPEX).</p></div>
+        </div>
+      </div>
+
+      <!-- TAB: Módulo 3 -->
+      <div class="ltab-panel" id="ltp-m3">
+        <h3 class="ltp-title">Indicadores de Gestión (KPIs)</h3>
+        <div class="concept-grid">
+          <div class="concept-card"><h4>Índice Ocupacional</h4><p>(Días-cama ocupados ÷ Días-cama disponibles) × 100. Óptimo IPS alta complejidad: 80–85%.</p></div>
+          <div class="concept-card"><h4>Giro de Cama</h4><p>Egresos ÷ Camas disponibles. Cuántos pacientes atiende cada cama en el período. Mayor giro = mayor eficiencia.</p></div>
+          <div class="concept-card"><h4>Estancia Promedio</h4><p>Días-cama ocupados ÷ Egresos. Alta complejidad tiene estancias más largas (trasplantes, UCI) y mayor costo por egreso.</p></div>
+          <div class="concept-card"><h4>Días de Cartera</h4><p>(CxC ÷ Ingresos anuales) × 365. Aceptable: &lt;60 días. Crítico: &gt;90 días. Muy relevante ante EPS que pagan tarde.</p></div>
+          <div class="concept-card"><h4>Costo por Egreso</h4><p>Costos totales ÷ Egresos. Indicador clave de eficiencia. Comparar con ingreso por egreso para saber si el servicio es rentable.</p></div>
+          <div class="concept-card"><h4>Margen Operativo</h4><p>Utilidad Operacional ÷ Ingresos Totales. Saludable en IPS alta complejidad: &gt;15%. Somer meta: ≥20%.</p></div>
+        </div>
+      </div>
+
+      <!-- TAB: Módulo 4 -->
+      <div class="ltab-panel" id="ltp-m4">
+        <h3 class="ltp-title">Costeo ABC (Activity Based Costing)</h3>
+        <div class="concept-grid">
+          <div class="concept-card"><h4>Lógica ABC</h4><p>Actividades consumen recursos → Servicios consumen actividades. Asigna CIF según consumo real de cada servicio.</p></div>
+          <div class="concept-card"><h4>4 Etapas del ABC</h4><p>1. Identificar actividades, 2. Asignar costos a actividades, 3. Definir inductores de costo, 4. Asignar costos a servicios según consumo del inductor.</p></div>
+          <div class="concept-card"><h4>Inductores en Somer</h4><p>Quirófano: horas usadas. Esterilización: nº instrumentos. UCI: horas de ocupación. Banco de Sangre: unidades transfundidas. Lab: nº exámenes.</p></div>
+          <div class="concept-card"><h4>Subsidio Cruzado</h4><p>Cuando el costeo tradicional asigna costos de un servicio (ej. trasplante) a otro (ej. consulta ambulatoria), distorsionando la rentabilidad.</p></div>
+          <div class="concept-card"><h4>Time-Driven ABC</h4><p>Simplifica el ABC usando el tiempo como único inductor universal. Más fácil de mantener en múltiples sedes como la Somer.</p></div>
+          <div class="concept-card"><h4>Implementación por Fases</h4><p>Fase 1: Centros de costo. Fase 2: ABC pleno o TD-ABC. Reduce riesgo y resistencia cultural en la organización.</p></div>
+        </div>
+      </div>
+
+      <!-- TAB: Módulo 5 -->
+      <div class="ltab-panel" id="ltp-m5">
+        <h3 class="ltp-title">Normativa Sector Salud Colombia</h3>
+        <div class="concept-grid">
+          <div class="concept-card"><h4>Ley 100 de 1993</h4><p>Creó el SGSSS. EPS = aseguradoras que administran riesgo. IPS = prestadoras de servicios. Regímenes contributivo y subsidiado.</p></div>
+          <div class="concept-card"><h4>ADRES</h4><p>Administra recursos financieros del SGSSS. Gira UPC a EPS. No acredita IPS (ICONTEC/MinSalud), no vigila (Supersalud).</p></div>
+          <div class="concept-card"><h4>UPC y PBS</h4><p>UPC: valor per cápita anual que ADRES gira a EPS. PBS: Plan Básico de Salud cubierto con esa UPC. No-PBS se tramita por MIPRES.</p></div>
+          <div class="concept-card"><h4>CUPS y RIPS</h4><p>CUPS: código único por procedimiento (base tarifaria). RIPS: registro individual de atención. Error en CUPS o RIPS = glosa o rechazo.</p></div>
+          <div class="concept-card"><h4>ISS vs SOAT</h4><p>ISS/SGSSS: financia UPC/ADRES, ámbito asegurados EPS. SOAT: accidentes tránsito, financia aseguradoras y FONSAT. Tarifas SOAT históricamente más altas.</p></div>
+          <div class="concept-card"><h4>Supersalud y MIPRES</h4><p>Supersalud: vigilancia y control de IPS. MIPRES: prescripción de tecnologías NO PBS (medicamentos oncológicos, dispositivos trasplante). Exige monitoreo de costos.</p></div>
+        </div>
+      </div>
+
+      <!-- TAB: Módulo 6 -->
+      <div class="ltab-panel" id="ltp-m6">
+        <h3 class="ltp-title">Contabilidad Aplicada a Costos</h3>
+        <div class="concept-grid">
+          <div class="concept-card"><h4>Ecuación Contable</h4><p>Activo = Pasivo + Patrimonio. Siempre en equilibrio. Cada transacción afecta ≥2 cuentas (partida doble).</p></div>
+          <div class="concept-card"><h4>Depreciación Línea Recta</h4><p>Dep. anual = (Costo − Valor Residual) ÷ Vida Útil. Mismo importe cada año. Ej. ECMO: ($800M−$80M)÷8 = $90M/año.</p></div>
+          <div class="concept-card"><h4>Depreciación Saldo Decreciente</h4><p>Dep. = Valor en libros × Tasa. Mayor costo en años iniciales. Ej. laparoscopia año 2: ($180M×75%)×25% = $33.75M.</p></div>
+          <div class="concept-card"><h4>Provisión de Cartera</h4><p>Estima incobrables. Db Gasto provisión / Cr Provisión cartera. Reduce utilidad sin salida de caja. Aplica principio de prudencia.</p></div>
+          <div class="concept-card"><h4>Glosas</h4><p>Descuentos que hace la EPS a la factura. Db Gasto glosas / Cr Provisión cartera. Gestión activa de RIPS reduce su frecuencia.</p></div>
+          <div class="concept-card"><h4>Asientos Clave</h4><p>Compra a crédito: Db Inventario / Cr CxP. Facturación: Db CxC / Cr Ingresos. Pago EPS: Db Bancos / Cr CxC. Nómina UCI: Db 6205 / Cr Bancos.</p></div>
+        </div>
+      </div>
+
+      <!-- TAB: Glosario -->
+      <div class="ltab-panel" id="ltp-glosario">
+        <h3 class="ltp-title">Glosario de Términos</h3>
+        <div class="glossary-list" id="glossary-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     OVERLAYS: Toast & Badge Unlock
+═══════════════════════════════════════════ -->
+<div class="toast" id="toast">
+  <span id="toast-txt">Mensaje</span>
+</div>
+
+<div class="badge-unlock-overlay" id="badge-unlock-overlay" style="display:none">
+  <div class="buo-card">
+    <div class="buo-icon" id="buo-icon">🏆</div>
+    <div class="buo-label">¡Logro Desbloqueado!</div>
+    <div class="buo-name" id="buo-name">Logro</div>
+    <div class="buo-desc" id="buo-desc">Descripción</div>
+    <button class="btn-ghost" onclick="document.getElementById('badge-unlock-overlay').style.display='none'">Continuar</button>
+  </div>
+</div>
+
+<!-- Confetti canvas -->
+<canvas id="confetti-canvas" style="position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:none"></canvas>
+
+<script src="data/questions.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/questions.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/feedback.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
