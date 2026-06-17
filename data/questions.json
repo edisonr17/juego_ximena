@@ -1,6 +1,6 @@
 {
   "meta": {
-    "total": 100,
+    "total": 115,
     "source": "Examen_Ascenso_Somer_v2_CON_RESPUESTAS.docx",
     "modules": 8
   },
@@ -1304,6 +1304,201 @@
       },
       "correct": "B",
       "justification": "Proponer implementación por fases demuestra: (1) conocimiento del ABC y sus variantes (Time-Driven ABC), (2) comprensión de la complejidad de una institución con 5 sedes y múltiples servicios de alta complejidad, (3) visión práctica sobre el cambio organizacional (adaptación del equipo, ajuste de sistemas Dinámica Web Somer, validación de inductores), y (4) madurez para priorizar resultados sostenibles."
+    },
+    {
+      "id": 101,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "¿Cuál es el orden correcto de presentación del Estado de Resultados de la Clínica Somer bajo NIIF?",
+      "options": {
+        "A": "Gastos operacionales → Ingresos → Utilidad bruta → Costos",
+        "B": "Ingresos operacionales → Costos de prestación → Utilidad bruta → Gastos operacionales → Utilidad operacional",
+        "C": "Patrimonio → Ingresos → Gastos → Utilidad del período",
+        "D": "Costos directos → Gastos administrativos → Ingresos → Utilidad neta"
+      },
+      "correct": "B",
+      "justification": "El Estado de Resultados bajo NIIF sigue la estructura: Ingresos operacionales − Costos de prestación de servicios (Clase 6) = Utilidad bruta − Gastos operacionales (Clase 5) = Utilidad operacional ± Ingresos y gastos no operacionales = Utilidad antes de impuestos − Impuesto de renta = Utilidad neta del período. Esta secuencia permite identificar el desempeño en cada nivel de la operación de la Clínica Somer."
+    },
+    {
+      "id": 102,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "La Clínica Somer presenta activos corrientes por $3.200 millones y pasivos corrientes por $1.800 millones. ¿Cuál es el capital de trabajo neto?",
+      "options": {
+        "A": "$5.000 millones",
+        "B": "$1.800 millones",
+        "C": "$1.400 millones",
+        "D": "$3.200 millones"
+      },
+      "correct": "C",
+      "justification": "Capital de trabajo neto = Activos corrientes − Pasivos corrientes = $3.200M − $1.800M = $1.400M. Un capital de trabajo positivo indica que la Clínica Somer puede cubrir sus obligaciones de corto plazo (nómina, proveedores, cuotas) con sus activos líquidos disponibles. Este indicador es crítico en el sector salud, donde las EPS pueden demorar el pago de cartera entre 60 y 120 días."
+    },
+    {
+      "id": 103,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "¿Qué mide el EBITDA en el contexto financiero de la Clínica Somer?",
+      "options": {
+        "A": "La utilidad neta disponible para distribuir a los accionistas después de impuestos",
+        "B": "El total de ingresos facturados a EPS e IPS en el período",
+        "C": "La capacidad operativa de generar caja antes de intereses, impuestos, depreciación y amortización",
+        "D": "El margen bruto de la Clínica antes de descontar gastos administrativos"
+      },
+      "correct": "C",
+      "justification": "EBITDA (Earnings Before Interest, Taxes, Depreciation and Amortization) mide la generación de caja operativa pura, excluyendo efectos financieros y contables. En la Clínica Somer es especialmente útil porque la inversión en equipos de alta complejidad (TAC, resonancia, ECMO) genera depreciaciones elevadas que reducen la utilidad contable sin salida de efectivo. Un EBITDA positivo y creciente indica que la operación asistencial es autosostenible."
+    },
+    {
+      "id": 104,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "Los ingresos operacionales de la Clínica Somer son $9.500 millones y los costos de prestación de servicios suman $6.840 millones. ¿Cuál es el margen bruto?",
+      "options": {
+        "A": "72,0%",
+        "B": "28,0%",
+        "C": "43,5%",
+        "D": "56,5%"
+      },
+      "correct": "B",
+      "justification": "Margen bruto = (Ingresos − Costos de prestación) / Ingresos × 100 = (9.500 − 6.840) / 9.500 × 100 = 2.660 / 9.500 × 100 = 28,0%. Este indicador muestra qué porcentaje de los ingresos queda después de cubrir los costos asistenciales directos. En IPS de alta complejidad como la Clínica Somer, un margen bruto del 25–35% es razonable, dado el peso de insumos, tecnología y personal especializado."
+    },
+    {
+      "id": 105,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "La Clínica Somer tiene activos corrientes de $4.500 millones y pasivos corrientes de $2.500 millones. ¿Cuál es la razón corriente?",
+      "options": {
+        "A": "0,56 — la clínica no puede cubrir sus deudas de corto plazo",
+        "B": "2,00 — por cada peso de deuda corriente hay $2 de activo corriente",
+        "C": "1,80 — por cada peso de deuda corriente hay $1,80 de activo corriente",
+        "D": "$7.000 millones — diferencia entre activos y pasivos corrientes"
+      },
+      "correct": "C",
+      "justification": "Razón corriente = Activos corrientes / Pasivos corrientes = 4.500 / 2.500 = 1,80. Significa que por cada $1 de deuda a corto plazo, la Clínica Somer dispone de $1,80 en activos líquidos. Una razón entre 1,5 y 2,5 se considera saludable para el sector salud. Por debajo de 1 indica riesgo de iliquidez; muy por encima puede señalar activos ociosos como cartera sin recuperar o inventarios excesivos."
+    },
+    {
+      "id": 106,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "Las cesantías, prima de servicios y vacaciones causadas del personal asistencial de la Clínica Somer se clasifican contablemente como:",
+      "options": {
+        "A": "Gastos del período en la Clase 5 del PUC",
+        "B": "Activos diferidos en la Clase 1 del PUC",
+        "C": "Pasivos corrientes en la Clase 2 del PUC (obligaciones laborales)",
+        "D": "Ingresos diferidos en la Clase 4 del PUC"
+      },
+      "correct": "C",
+      "justification": "Las prestaciones sociales causadas (cesantías, intereses sobre cesantías, prima y vacaciones) son obligaciones de la Clínica Somer con sus empleados que se acumulan a medida que se prestan los servicios. Se registran como pasivos corrientes en la Clase 2 del PUC (cuentas 2610, 2620, 2630) porque representan compromisos ciertos de corto plazo. Su contrapartida es un débito en la Clase 6 (costos de personal asistencial) o Clase 5 (personal administrativo)."
+    },
+    {
+      "id": 107,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "¿Cuál de los siguientes conceptos reduce la utilidad neta de la Clínica Somer pero NO implica una salida de efectivo en el mismo período?",
+      "options": {
+        "A": "Pago de salarios del personal de la UCI Adultos",
+        "B": "Compra de medicamentos oncológicos al contado",
+        "C": "Depreciación del equipo de resonancia magnética",
+        "D": "Pago de servicios públicos de la sede principal"
+      },
+      "correct": "C",
+      "justification": "La depreciación es un gasto contable que distribuye el costo del equipo a lo largo de su vida útil, reduciendo la utilidad del período. Sin embargo, la salida de efectivo ocurrió al comprar el equipo; en períodos posteriores, la depreciación es solo un apunte contable sin movimiento de caja. Por eso, en el Estado de Flujo de Efectivo (método indirecto), se suma de nuevo a la utilidad neta para calcular el flujo operativo real. Los otros tres conceptos sí representan salidas de efectivo reales."
+    },
+    {
+      "id": 108,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "Salud Total EPS paga una factura de $250.000.000 a la Clínica Somer y le practica retención en la fuente a título de renta del 2%. ¿Cuánto recibe efectivamente la Clínica en su cuenta bancaria?",
+      "options": {
+        "A": "$255.000.000",
+        "B": "$245.000.000",
+        "C": "$200.000.000",
+        "D": "$248.000.000"
+      },
+      "correct": "B",
+      "justification": "Retención en la fuente = $250.000.000 × 2% = $5.000.000. Valor neto recibido = $250.000.000 − $5.000.000 = $245.000.000. La EPS actúa como agente retenedor y entrega los $5.000.000 directamente a la DIAN como anticipo del impuesto de renta de la Clínica Somer. Este valor queda registrado como un activo (anticipo de impuesto) en el balance y se descuenta de la declaración de renta al cierre del año fiscal."
+    },
+    {
+      "id": 109,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "Los ingresos operacionales de la Clínica Somer fueron $8.000 millones en 2023 y $9.360 millones en 2024. ¿Cuál fue la variación porcentual (análisis horizontal)?",
+      "options": {
+        "A": "85,5%",
+        "B": "14,5%",
+        "C": "17,0%",
+        "D": "1.360%"
+      },
+      "correct": "C",
+      "justification": "Variación % = (Valor año actual − Valor año anterior) / Valor año anterior × 100 = (9.360 − 8.000) / 8.000 × 100 = 1.360 / 8.000 × 100 = 17,0%. El análisis horizontal compara cifras de dos períodos para identificar tendencias. Un crecimiento del 17% en ingresos es positivo, pero debe contrastarse con el crecimiento de los costos y gastos para determinar si mejoró realmente la rentabilidad de la Clínica Somer."
+    },
+    {
+      "id": 110,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "La Clínica Somer tiene costos y gastos fijos de $3.000 millones anuales y un margen de contribución del 40% sobre sus ingresos. ¿Cuál es el punto de equilibrio en ingresos?",
+      "options": {
+        "A": "$1.200 millones",
+        "B": "$4.200 millones",
+        "C": "$7.500 millones",
+        "D": "$3.000 millones"
+      },
+      "correct": "C",
+      "justification": "Punto de equilibrio = Costos fijos / Margen de contribución = $3.000M / 0,40 = $7.500M. Por debajo de $7.500M en ingresos, la Clínica opera con pérdida; por encima, genera utilidad operacional. El margen de contribución del 40% significa que de cada peso ingresado, $0,40 cubre costos fijos y genera ganancia; los $0,60 restantes son costos variables como insumos, medicamentos y mano de obra directa variable."
+    },
+    {
+      "id": 111,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "La Clínica Somer tiene ingresos anuales de $10.800 millones y saldo de cuentas por cobrar de $2.700 millones. ¿Cuántos días tarda en promedio en recuperar su cartera?",
+      "options": {
+        "A": "25 días",
+        "B": "40 días",
+        "C": "91 días",
+        "D": "120 días"
+      },
+      "correct": "C",
+      "justification": "Días de cartera = (Cuentas por cobrar / Ingresos) × 365 = (2.700 / 10.800) × 365 = 0,25 × 365 = 91 días. En el sector salud colombiano, plazos de 60–90 días son frecuentes por los ciclos de radicación, auditoría y pago de las EPS. Un indicador superior a 120 días puede comprometer la liquidez de la Clínica, obligándola a financiarse con deuda costosa mientras espera el recaudo."
+    },
+    {
+      "id": 112,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "Bajo NIIF (NIC 16), los equipos médicos de alta complejidad de la Clínica Somer pueden medirse posteriormente por:",
+      "options": {
+        "A": "Únicamente al costo histórico original, sin ajustes posteriores",
+        "B": "Valor de mercado actualizado mensualmente de forma obligatoria",
+        "C": "Modelo del costo (costo − depreciación acumulada − deterioro) O modelo de revaluación (valor razonable − depreciación posterior), según política contable de la entidad",
+        "D": "Solo por el valor de reposición del equipo nuevo equivalente"
+      },
+      "correct": "C",
+      "justification": "La NIC 16 (adoptada en Colombia mediante Decreto 2420 de 2015 para entidades Grupo 1) permite dos modelos de medición posterior: (1) Modelo del costo: costo histórico menos depreciación acumulada y pérdidas por deterioro; (2) Modelo de revaluación: valor razonable a la fecha de revaluación menos depreciación y deterioro posteriores. La Clínica Somer debe elegir y aplicar consistentemente un modelo por clase de activo. El modelo de revaluación puede ser relevante para inmuebles o equipos especializados con mercado activo."
+    },
+    {
+      "id": 113,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "¿Cuál de los siguientes eventos modifica el patrimonio de la Clínica Somer?",
+      "options": {
+        "A": "Cobro de cartera a Sura EPS por $80 millones facturados en período anterior",
+        "B": "Compra de medicamentos oncológicos a crédito por $30 millones",
+        "C": "Pago de cuenta por pagar a proveedor de dispositivos médicos",
+        "D": "Distribución de utilidades decretada a los accionistas por $200 millones"
+      },
+      "correct": "D",
+      "justification": "La distribución de utilidades reduce las utilidades retenidas (componente del patrimonio): Débito Utilidades retenidas / Crédito Dividendos por pagar. Las otras opciones no afectan el patrimonio: (A) cobro de cartera es un intercambio de activos (caja + / cartera −); (B) compra a crédito aumenta activo y pasivo en igual monto; (C) pago de proveedor reduce activo y pasivo en igual monto. En los tres casos la ecuación Activo = Pasivo + Patrimonio se mantiene sin cambiar el patrimonio."
+    },
+    {
+      "id": 114,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "En la conciliación bancaria de la Clínica Somer se identifica un cheque girado al proveedor de insumos quirúrgicos por $18 millones que aún no ha sido cobrado en el banco. ¿Cómo se trata en la conciliación?",
+      "options": {
+        "A": "Se suma al saldo del extracto bancario",
+        "B": "Se suma al saldo en libros de la Clínica",
+        "C": "Se resta del saldo del extracto bancario",
+        "D": "No se incluye porque el cheque ya fue registrado en libros"
+      },
+      "correct": "C",
+      "justification": "Un cheque girado y ya registrado en libros de la Clínica (reduciendo el saldo contable) pero aún no presentado al banco por el beneficiario, no aparece en el extracto bancario. Para conciliar, se resta del saldo bancario: Saldo extracto − Cheques girados no cobrados + Consignaciones en tránsito = Saldo ajustado según libros. Ignorarlo significaría sobreestimar el disponible real en el banco."
+    },
+    {
+      "id": 115,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "La Clínica Somer reportó utilidad neta de $560 millones sobre un patrimonio promedio de $3.500 millones. ¿Cuál es el ROE y qué significa?",
+      "options": {
+        "A": "6,25% — la clínica genera $6,25 de utilidad por cada $1 de activo total",
+        "B": "16,0% — por cada $100 de patrimonio, la Clínica genera $16 de utilidad neta",
+        "C": "62,5% — el retorno sobre el activo total de la institución",
+        "D": "0,16% — el margen neto sobre los ingresos operacionales"
+      },
+      "correct": "B",
+      "justification": "ROE (Return on Equity) = Utilidad neta / Patrimonio promedio × 100 = 560 / 3.500 × 100 = 16,0%. Significa que por cada $100 aportados por los accionistas de la Clínica Somer, se generan $16 de utilidad neta. Un ROE del 16% es sólido en el sector hospitalario colombiano (promedio 8–14%). Este indicador evalúa si la inversión en la Clínica es rentable comparada con alternativas del mercado de capitales."
     }
   ]
 }
