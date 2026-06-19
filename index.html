@@ -187,7 +187,7 @@
     </div>
   </div>
 
-  <div class="cat-wrap" id="cat-wrap"><div class="cat-sprite" id="cat-sprite"></div></div>
+  <div class="cat-wrap" id="cat-wrap"><div id="cat-flip"><div class="cat-sprite" id="cat-sprite"></div></div></div>
   <div class="cat-hint" id="cat-hint">← → ↑ ↓ mueven a la gatita</div>
 
   <script>
@@ -219,7 +219,7 @@
       document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       window.scrollTo(0,0);
-      const on=id!=='screen-start';
+      const on=id==='screen-start';
       catWrap.classList.toggle('cat-on',on);
       catHintEl.classList.toggle('cat-on',on);
     }
@@ -316,6 +316,7 @@
     const ROWS={walk:0, jump:1, crouch:2, walkL:3};
 
     const catWrap=document.getElementById('cat-wrap');
+    const catFlip=document.getElementById('cat-flip');
     const catEl=document.getElementById('cat-sprite');
     const catHintEl=document.getElementById('cat-hint');
 
@@ -355,7 +356,7 @@
       cs.y=window.innerHeight-SZ-20;
       cs.facing=1;cs.reacting=false;
       if(cs.reactTimer)clearTimeout(cs.reactTimer);
-      catEl.style.transform='scaleX(1)';
+      catFlip.style.transform='scaleX(1)';
       catWrap.style.left=cs.x+'px';
       catWrap.style.top=cs.y+'px';
       playAnim('walk');
@@ -385,8 +386,8 @@
           cs.y=Math.max(0,Math.min(window.innerHeight-SZ,cs.y+dy));
           catWrap.style.left=cs.x+'px';
           catWrap.style.top=cs.y+'px';
-          if(dx>0&&cs.facing!==1){cs.facing=1;catEl.style.transform='scaleX(1)';}
-          if(dx<0&&cs.facing!==-1){cs.facing=-1;catEl.style.transform='scaleX(-1)';}
+          if(dx>0&&cs.facing!==1){cs.facing=1;catFlip.style.transform='scaleX(1)';}
+          if(dx<0&&cs.facing!==-1){cs.facing=-1;catFlip.style.transform='scaleX(-1)';}
         }
 
         if(moving!==prevMove){
