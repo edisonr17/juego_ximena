@@ -1,22 +1,17 @@
 'use strict';
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  SPRITE CONSTANTS — must match Python export
-//  All 17 PNGs: 296×262, global bbox x=[0,255] y=[34,255], 20px padding all sides
-//  Source pixel (sx,sy) → canvas pixel (sx+20, sy-14)
-// ─────────────────────────────────────────────────────────────────────────────
-const SPRITE_W = 296;
-const SPRITE_H = 262;
+const SPRITE_W = 266;
+const SPRITE_H = 201;
 
-// Canvas Y row where each animation's feet touch the ground.
-// Computed as avg(bot_y) across frames of that animation.
+// All frames share the same ground line: cat bottom at canvas_h - 20
+const FOOT_Y = 181;
 const ANIM_FOOT = {
-  idle:       169,
-  walk:       224,
-  jump_start: 226,   // jump_01 on ground, same as walk
-  jump_air:   187,   // jump_03 at peak
-  fall:       219,   // jump_04-05 descending
-  land:       195,   // crouch avg
+  idle:       FOOT_Y,
+  walk:       FOOT_Y,
+  jump_start: FOOT_Y,
+  jump_air:   FOOT_Y,
+  fall:       FOOT_Y,
+  land:       FOOT_Y,
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -250,8 +245,8 @@ class CatCharacter {
     this.scale = 0.55;
 
     const R = (n, fr, fps, fy, loop = true) => this._anim.register(n, fr, fps, fy, loop);
-    R('idle',       ['idle_01','idle_02','idle_03','idle_04'],            4,  ANIM_FOOT.idle);
-    R('walk',       ['walk_01','walk_02','walk_03','walk_04'], 10,  ANIM_FOOT.walk);
+    R('idle',       ['idle_01','idle_02','idle_03','idle_04','idle_05'],              4,  ANIM_FOOT.idle);
+    R('walk',       ['walk_01','walk_02','walk_03','walk_04','walk_05'],            10,  ANIM_FOOT.walk);
     R('jump_start', ['jump_01','jump_02'],                               14,  ANIM_FOOT.jump_start, false);
     R('jump_air',   ['jump_03'],                                          4,  ANIM_FOOT.jump_air);
     R('fall',       ['jump_04','jump_05'],                                8,  ANIM_FOOT.fall);
@@ -337,7 +332,7 @@ class Game {
   async init() {
     const loader = new SpriteLoader();
     const names  = [
-      'idle_01','idle_02','idle_03','idle_04',
+      'idle_01','idle_02','idle_03','idle_04','idle_05',
       'walk_01','walk_02','walk_03','walk_04','walk_05',
       'jump_01','jump_02','jump_03','jump_04','jump_05',
       'crouch_01','crouch_02','crouch_03','crouch_04',
