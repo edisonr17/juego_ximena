@@ -322,8 +322,11 @@
 
     function bgPos(col,row){return `${-col*SZ}px ${-row*SZ}px`;}
 
+    const GRAVITY=0.55, JUMP_VY=-13;
+    function groundY(){return window.innerHeight-SZ-20;}
+
     const cs={
-      x:0,y:0,facing:1,
+      x:0,y:0,velY:0,onGround:true,facing:1,
       animName:'',frame:0,timer:null,
       reacting:false,reactTimer:null
     };
@@ -353,7 +356,8 @@
 
     function catReset(){
       cs.x=window.innerWidth-SZ-20;
-      cs.y=window.innerHeight-SZ-20;
+      cs.y=groundY();
+      cs.velY=0;cs.onGround=true;
       cs.facing=1;cs.reacting=false;
       if(cs.reactTimer)clearTimeout(cs.reactTimer);
       catFlip.style.transform='scaleX(1)';
@@ -364,41 +368,48 @@
 
     const keys={};
     document.addEventListener('keydown',e=>{
-      if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)){
+      if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' '].includes(e.key)){
         e.preventDefault();keys[e.key]=true;
       }
     });
     document.addEventListener('keyup',e=>{keys[e.key]=false;});
 
-    let prevMove=false;
+    let prevState='idle';
     function catLoop(){
       if(!cs.reacting){
-        const spd=3;let dx=0,dy=0;
-        if(keys['ArrowRight'])dx= spd;
-        if(keys['ArrowLeft']) dx=-spd;
-        if(keys['ArrowDown']) dy= spd;
-        if(keys['ArrowUp'])   dy=-spd;
+        const spd=3;let dx=0;
+        if(keys['ArrowRight']) dx= spd;
+        if(keys['ArrowLeft'])  dx=-spd;
 
-        const moving=dx!==0||dy!==0;
+        // Jump trigger
+        if((keys['ArrowUp']||keys[' '])&&cs.onGround){
+          cs.velY=JUMP_VY; cs.onGround=false;
+        }
 
-        if(moving){
+        // Horizontal
+        if(dx!==0){
           cs.x=Math.max(0,Math.min(window.innerWidth-SZ,cs.x+dx));
-          cs.y=Math.max(0,Math.min(window.innerHeight-SZ,cs.y+dy));
           catWrap.style.left=cs.x+'px';
-          catWrap.style.top=cs.y+'px';
           if(dx>0&&cs.facing!==1){cs.facing=1;catFlip.style.transform='scaleX(1)';}
           if(dx<0&&cs.facing!==-1){cs.facing=-1;catFlip.style.transform='scaleX(-1)';}
         }
 
-        if(moving!==prevMove){
-          prevMove=moving;
-          if(moving){
-            playAnim('walk');
-          } else {
-            clearInterval(cs.timer);
-            cs.frame=0;
-            catEl.style.backgroundPosition=bgPos(0,ROWS.walk);
-          }
+        // Vertical physics
+        if(!cs.onGround){
+          cs.velY+=GRAVITY;
+          cs.y+=cs.velY;
+          const gy=groundY();
+          if(cs.y>=gy){cs.y=gy;cs.velY=0;cs.onGround=true;}
+          catWrap.style.top=cs.y+'px';
+        }
+
+        // Determine state and trigger animation on change
+        const crouching=keys['ArrowDown']&&cs.onGround;
+        const st=!cs.onGround?'jump':crouching?'crouch':dx!==0?'walk':'idle';
+        if(st!==prevState){
+          prevState=st;
+          if(st==='jump'||st==='walk'||st==='crouch'){ playAnim(st); }
+          else{ clearInterval(cs.timer);cs.frame=0;catEl.style.backgroundPosition=bgPos(0,ROWS.walk); }
         }
       }
       requestAnimationFrame(catLoop);
