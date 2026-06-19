@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cat Animator — Costos Sommer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:#07111F;
+    color:#e2e8f0;
+    font-family:'Inter',sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:32px;
+    padding:40px 20px;
+  }
+  h1{
+    font-family:'DM Serif Display',serif;
+    font-size:28px;
+    color:#e2e8f0;
+    letter-spacing:0.02em;
+  }
+  .stage{
+    position:relative;
+    background:#0D1B2E;
+    border:1px solid #1a3a5c;
+    border-radius:16px;
+    overflow:hidden;
+  }
+  canvas{display:block;}
+  .controls{
+    background:#0D1B2E;
+    border:1px solid #1a3a5c;
+    border-radius:16px;
+    padding:24px 28px;
+    width:min(420px,100%);
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+  .row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+  .label{font-size:12px;color:#6b8fb5;text-transform:uppercase;letter-spacing:0.08em;width:56px;flex-shrink:0;}
+  .btn-group{display:flex;gap:8px;flex-wrap:wrap;}
+  button{
+    padding:8px 16px;
+    border-radius:8px;
+    border:1px solid #1a3a5c;
+    background:#0D1B2E;
+    color:#e2e8f0;
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    font-weight:500;
+    cursor:pointer;
+    transition:background .15s,border-color .15s,color .15s;
+  }
+  button:hover{background:#1a3a5c;border-color:#2E75B6;}
+  button.active{background:#2E75B6;border-color:#2E75B6;color:#fff;}
+  input[type=range]{
+    flex:1;
+    accent-color:#2E75B6;
+    height:4px;
+  }
+  .fps-val{font-size:13px;color:#2E75B6;font-weight:600;min-width:40px;}
+  .info-row{
+    display:flex;
+    justify-content:space-between;
+    font-size:12px;
+    color:#6b8fb5;
+    border-top:1px solid #1a3a5c;
+    padding-top:14px;
+  }
+  .frame-indicator{
+    display:flex;
+    gap:5px;
+    align-items:center;
+    flex-wrap:wrap;
+  }
+  .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:#1a3a5c;
+    transition:background .1s;
+  }
+  .dot.active{background:#2E75B6;}
+</style>
+</head>
+<body>
+<h1>Cat Animator</h1>
+
+<div class="stage">
+  <canvas id="cv" width="320" height="280"></canvas>
+</div>
+
+<div class="controls">
+  <div class="row">
+    <span class="label">Anim</span>
+    <div class="btn-group" id="animBtns">
+      <button data-anim="walk" class="active">Walk</button>
+      <button data-anim="jump">Jump</button>
+      <button data-anim="crouch">Crouch</button>
+      <button data-anim="idle">Idle</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <span class="label">FPS</span>
+    <input type="range" id="fpsSlider" min="1" max="24" value="10">
+    <span class="fps-val" id="fpsVal">10</span>
+  </div>
+
+  <div class="row">
+    <span class="label">Control</span>
+    <div class="btn-group">
+      <button id="playBtn">Pausar</button>
+      <button id="scaleBtn" data-s="1">1×</button>
+    </div>
+  </div>
+
+  <div class="info-row">
+    <div class="frame-indicator" id="dots"></div>
+    <span id="frameLabel">frame 1/1</span>
+  </div>
+</div>
+
+<script src="animator.js"></script>
+<script>
+const ANIM_DEF = {
+  walk:   ['walk_01.png','walk_02.png','walk_03.png','walk_04.png','walk_05.png'],
+  jump:   ['jump_01.png','jump_02.png','jump_03.png','jump_04.png','jump_05.png'],
+  crouch: ['crouch_01.png','crouch_02.png','crouch_03.png','crouch_04.png'],
+  idle:   ['idle_01.png','idle_02.png','idle_03.png','idle_04.png'],
+};
+
+const DEFAULT_FPS = { walk:10, jump:12, crouch:6, idle:4 };
+
+const cv = document.getElementById('cv');
+const animator = new CatAnimator(cv);
+animator.scale = 1;
+
+const dotsEl = document.getElementById('dots');
+const frameLabel = document.getElementById('frameLabel');
+
+animator.onFrame = (idx, total) => {
+  frameLabel.textContent = `frame ${idx+1}/${total}`;
+  dotsEl.querySelectorAll('.dot').forEach((d,i) => {
+    d.classList.toggle('active', i === idx);
+  });
+};
+
+function buildDots(count) {
+  dotsEl.innerHTML = '';
+  for (let i=0; i<count; i++) {
+    const d = document.createElement('div');
+    d.className = 'dot';
+    dotsEl.appendChild(d);
+  }
+}
+
+animator.loadSprites('sprites', ANIM_DEF).then(() => {
+  setAnim('walk');
+}).catch(err => console.error(err));
+
+function setAnim(name) {
+  const fps = DEFAULT_FPS[name] || 8;
+  document.getElementById('fpsSlider').value = fps;
+  document.getElementById('fpsVal').textContent = fps;
+  animator.setFPS(fps);
+  animator.play(name);
+  buildDots((ANIM_DEF[name]||[]).length);
+
+  document.querySelectorAll('#animBtns button').forEach(b => {
+    b.classList.toggle('active', b.dataset.anim === name);
+  });
+
+  document.getElementById('playBtn').textContent = 'Pausar';
+}
+
+document.querySelectorAll('#animBtns button').forEach(btn => {
+  btn.addEventListener('click', () => setAnim(btn.dataset.anim));
+});
+
+document.getElementById('fpsSlider').addEventListener('input', e => {
+  const v = Number(e.target.value);
+  document.getElementById('fpsVal').textContent = v;
+  animator.setFPS(v);
+});
+
+document.getElementById('playBtn').addEventListener('click', () => {
+  if (animator.playing) {
+    animator.stop();
+    document.getElementById('playBtn').textContent = 'Reanudar';
+  } else {
+    animator.play(animator.current);
+    document.getElementById('playBtn').textContent = 'Pausar';
+  }
+});
+
+const scales = [1, 1.5, 0.5];
+let scaleIdx = 0;
+document.getElementById('scaleBtn').addEventListener('click', btn => {
+  scaleIdx = (scaleIdx + 1) % scales.length;
+  animator.scale = scales[scaleIdx];
+  btn.target.textContent = scales[scaleIdx] + '×';
+});
+</script>
+</body>
+</html>
