@@ -392,7 +392,9 @@
 
         if(moving!==prevMove){
           prevMove=moving;
-          if(!moving){
+          if(moving){
+            playAnim('walk');
+          } else {
             clearInterval(cs.timer);
             cs.frame=0;
             catEl.style.backgroundPosition=bgPos(0,ROWS.walk);
