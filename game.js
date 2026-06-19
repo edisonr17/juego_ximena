@@ -1,10 +1,10 @@
 'use strict';
 
 const SPRITE_W = 266;
-const SPRITE_H = 200;
+const SPRITE_H = 210;
 
 // All frames share the same ground line: cat bottom at canvas_h - 20
-const FOOT_Y = 180;
+const FOOT_Y = 190;
 const ANIM_FOOT = {
   idle:       FOOT_Y,
   walk:       FOOT_Y,
