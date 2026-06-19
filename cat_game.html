@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cat Platformer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #030A14;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+    gap: 14px;
+  }
+
+  h1 {
+    color: rgba(46,117,182,0.7);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  canvas {
+    display: block;
+    border-radius: 12px;
+    border: 1px solid #1a3a5c;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 48px rgba(46,117,182,0.12);
+  }
+</style>
+</head>
+<body>
+<h1>Cat Platformer</h1>
+<canvas id="gameCanvas" width="800" height="460"></canvas>
+<script src="game.js"></script>
+</body>
+</html>
