@@ -18,6 +18,7 @@
     min-height: 100vh;
     font-family: 'Inter', system-ui, sans-serif;
     gap: 14px;
+    overflow: hidden;
   }
 
   h1 {
@@ -36,11 +37,77 @@
     height: auto;
     box-shadow: 0 0 48px rgba(46,117,182,0.12);
   }
+
+  /* ── D-pad ── */
+  .dpad {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(2, 60px);
+    gap: 8px;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .dpad-btn {
+    width: 60px; height: 60px;
+    background: rgba(14,30,52,0.80);
+    border: 1.5px solid rgba(46,117,182,0.45);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    color: rgba(226,232,240,0.75);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background .1s, border-color .1s, color .1s;
+  }
+
+  .dpad-btn.pressed {
+    background: rgba(46,117,182,0.55);
+    border-color: rgba(46,117,182,0.9);
+    color: #fff;
+  }
+
+  /* grid positions */
+  .dpad-jump  { grid-column: 2; grid-row: 1; font-size: 20px; }
+  .dpad-left  { grid-column: 1; grid-row: 2; }
+  .dpad-right { grid-column: 3; grid-row: 2; }
+
+  @media (min-width: 700px) {
+    .dpad { display: none; }   /* hide on desktop — use keyboard */
+  }
 </style>
 </head>
 <body>
 <h1>Cat Platformer</h1>
 <canvas id="gameCanvas" width="800" height="460"></canvas>
+
+<div class="dpad">
+  <button class="dpad-btn dpad-jump"  data-code="Space"      >SALTO</button>
+  <button class="dpad-btn dpad-left"  data-code="ArrowLeft"  >←</button>
+  <button class="dpad-btn dpad-right" data-code="ArrowRight" >→</button>
+</div>
+
 <script src="game.js"></script>
+<script>
+  document.querySelectorAll('.dpad-btn').forEach(btn => {
+    const code = btn.dataset.code;
+
+    const press = e => {
+      e.preventDefault();
+      btn.classList.add('pressed');
+      window.dispatchEvent(new KeyboardEvent('keydown', { code, bubbles: true }));
+    };
+    const release = () => {
+      btn.classList.remove('pressed');
+      window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true }));
+    };
+
+    btn.addEventListener('pointerdown', press);
+    btn.addEventListener('pointerup',     release);
+    btn.addEventListener('pointercancel', release);
+    btn.addEventListener('pointerleave',  release);
+  });
+</script>
 </body>
 </html>
