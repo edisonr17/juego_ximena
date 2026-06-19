@@ -228,7 +228,7 @@ class PhysicsController {
 //  STATE MACHINE
 // ─────────────────────────────────────────────────────────────────────────────
 const S = Object.freeze({
-  IDLE:'IDLE', WALK:'WALK',
+  IDLE:'IDLE', WALK:'WALK', CROUCH:'CROUCH',
   JUMP_START:'JUMP_START', JUMP_AIR:'JUMP_AIR', FALL:'FALL', LAND:'LAND',
 });
 
@@ -247,10 +247,11 @@ class CatCharacter {
     const R = (n, fr, fps, fy, loop = true) => this._anim.register(n, fr, fps, fy, loop);
     R('idle',       ['idle_01','idle_02','idle_03','idle_04','idle_05'],              4,  ANIM_FOOT.idle);
     R('walk',       ['walk_01','walk_02','walk_03','walk_04','walk_05'],            10,  ANIM_FOOT.walk);
-    R('jump_start', ['jump_01','jump_02'],                               14,  ANIM_FOOT.jump_start, false);
-    R('jump_air',   ['jump_03'],                                          4,  ANIM_FOOT.jump_air);
-    R('fall',       ['jump_04','jump_05'],                                8,  ANIM_FOOT.fall);
-    R('land',       ['crouch_01','crouch_02','crouch_03','crouch_04'],   10,  ANIM_FOOT.land, false);
+    R('crouch',     ['crouch_01','crouch_02','crouch_03','crouch_04'],              6,  ANIM_FOOT.land);
+    R('jump_start', ['jump_01','jump_02'],                                         14,  ANIM_FOOT.jump_start, false);
+    R('jump_air',   ['jump_03'],                                                    4,  ANIM_FOOT.jump_air);
+    R('fall',       ['jump_04','jump_05'],                                          8,  ANIM_FOOT.fall);
+    R('land',       ['crouch_01','crouch_02','crouch_03','crouch_04'],             10,  ANIM_FOOT.land, false);
 
     this._anim.play('idle');
   }
@@ -263,6 +264,7 @@ class CatCharacter {
     switch (next) {
       case S.IDLE:       this._anim.play('idle');             break;
       case S.WALK:       this._anim.play('walk');             break;
+      case S.CROUCH:     this._anim.play('crouch');           break;
       case S.JUMP_START: this._anim.play('jump_start', true); this._p.jump(); break;
       case S.JUMP_AIR:   this._anim.play('jump_air');         break;
       case S.FALL:       this._anim.play('fall');             break;
@@ -271,25 +273,34 @@ class CatCharacter {
   }
 
   update(dt) {
-    const L    = this._in.held('ArrowLeft');
-    const R    = this._in.held('ArrowRight');
-    const jump = this._in.pressed('Space');
+    const L      = this._in.held('ArrowLeft');
+    const R      = this._in.held('ArrowRight');
+    const down   = this._in.held('ArrowDown');
+    const jump   = this._in.pressed('Space') || this._in.pressed('ArrowUp');
 
     if (R) this._dir = 1; else if (L) this._dir = -1;
-    this._p.update(dt, L, R);
+    const blockMove = down && this._p.onGround;
+    this._p.update(dt, blockMove ? false : L, blockMove ? false : R);
 
     const moving  = L || R;
     const slow    = !moving && Math.abs(this._p.vx) < 25;
     const goingUp = this._p.vy < 0;
+    const crouch  = down && this._p.onGround;
 
     switch (this._st) {
       case S.IDLE:
         if (jump)   { this._go(S.JUMP_START); break; }
+        if (crouch) { this._go(S.CROUCH);     break; }
         if (moving) { this._go(S.WALK);       break; }
         break;
       case S.WALK:
-        if (jump) { this._go(S.JUMP_START); break; }
-        if (slow) { this._go(S.IDLE);       break; }
+        if (jump)   { this._go(S.JUMP_START); break; }
+        if (crouch) { this._go(S.CROUCH);     break; }
+        if (slow)   { this._go(S.IDLE);       break; }
+        break;
+      case S.CROUCH:
+        if (jump)    { this._go(S.JUMP_START); break; }
+        if (!crouch) { this._go(moving ? S.WALK : S.IDLE); break; }
         break;
       case S.JUMP_START:
         if (this._anim.isDone()) this._go(goingUp ? S.JUMP_AIR : S.FALL);

@@ -68,9 +68,10 @@
     color: #fff;
   }
 
-  /* grid positions */
+  /* grid positions: row1=[jump], row2=[← ↓ →] */
   .dpad-jump  { grid-column: 2; grid-row: 1; font-size: 20px; }
   .dpad-left  { grid-column: 1; grid-row: 2; }
+  .dpad-down  { grid-column: 2; grid-row: 2; }
   .dpad-right { grid-column: 3; grid-row: 2; }
 
   @media (min-width: 700px) {
@@ -83,8 +84,9 @@
 <canvas id="gameCanvas" width="800" height="460"></canvas>
 
 <div class="dpad">
-  <button class="dpad-btn dpad-jump"  data-code="Space"      >SALTO</button>
+  <button class="dpad-btn dpad-jump"  data-code="ArrowUp"    >↑</button>
   <button class="dpad-btn dpad-left"  data-code="ArrowLeft"  >←</button>
+  <button class="dpad-btn dpad-down"  data-code="ArrowDown"  >↓</button>
   <button class="dpad-btn dpad-right" data-code="ArrowRight" >→</button>
 </div>
 
