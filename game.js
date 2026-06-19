@@ -2,20 +2,21 @@
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  SPRITE CONSTANTS — must match Python export
-//  All PNGs: 288×288, source pasted at (16,16), ≥16px margin on every border
+//  All 17 PNGs: 296×262, global bbox x=[0,255] y=[34,255], 20px padding all sides
+//  Source pixel (sx,sy) → canvas pixel (sx+20, sy-14)
 // ─────────────────────────────────────────────────────────────────────────────
-const SPRITE_SZ = 288;
+const SPRITE_W = 296;
+const SPRITE_H = 262;
 
-// For each animation: the Y row (in the 288×288 PNG) where the cat's feet
-// contact the ground.  Different because the sprite-sheet rows have different
-// vertical positioning.
+// Canvas Y row where each animation's feet touch the ground.
+// Computed as avg(bot_y) across frames of that animation.
 const ANIM_FOOT = {
-  idle:       199,
-  walk:       252,
-  jump_start: 256,
-  jump_air:   217,
-  fall:       249,
-  land:       225,
+  idle:       169,
+  walk:       224,
+  jump_start: 226,   // jump_01 on ground, same as walk
+  jump_air:   187,   // jump_03 at peak
+  fall:       219,   // jump_04-05 descending
+  land:       195,   // crouch avg
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -163,8 +164,8 @@ class AnimationController {
   }
 
   _blit(ctx, img, footX, footY, sx, sy, alpha, footYinPNG) {
-    const dw       = SPRITE_SZ * Math.abs(sx);
-    const dh       = SPRITE_SZ * sy;
+    const dw       = SPRITE_W * Math.abs(sx);
+    const dh       = SPRITE_H * sy;
     const pivotOff = footYinPNG * sy;   // distance from sprite top to foot
     const left     = footX - dw / 2;
     const top      = footY - pivotOff;
@@ -250,7 +251,7 @@ class CatCharacter {
 
     const R = (n, fr, fps, fy, loop = true) => this._anim.register(n, fr, fps, fy, loop);
     R('idle',       ['idle_01','idle_02','idle_03','idle_04'],            4,  ANIM_FOOT.idle);
-    R('walk',       ['walk_02','walk_03','walk_04','walk_05'], 10,  ANIM_FOOT.walk);
+    R('walk',       ['walk_01','walk_02','walk_03','walk_04'], 10,  ANIM_FOOT.walk);
     R('jump_start', ['jump_01','jump_02'],                               14,  ANIM_FOOT.jump_start, false);
     R('jump_air',   ['jump_03'],                                          4,  ANIM_FOOT.jump_air);
     R('fall',       ['jump_04','jump_05'],                                8,  ANIM_FOOT.fall);

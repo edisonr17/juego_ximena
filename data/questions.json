@@ -1,6 +1,6 @@
 {
   "meta": {
-    "total": 115,
+    "total": 155,
     "source": "Examen_Ascenso_Somer_v2_CON_RESPUESTAS.docx",
     "modules": 8
   },
@@ -1499,6 +1499,526 @@
       },
       "correct": "B",
       "justification": "ROE (Return on Equity) = Utilidad neta / Patrimonio promedio × 100 = 560 / 3.500 × 100 = 16,0%. Significa que por cada $100 aportados por los accionistas de la Clínica Somer, se generan $16 de utilidad neta. Un ROE del 16% es sólido en el sector hospitalario colombiano (promedio 8–14%). Este indicador evalúa si la inversión en la Clínica es rentable comparada con alternativas del mercado de capitales."
+    },
+    {
+      "id": 116,
+      "module": "Módulo 1 – Costos hospitalarios y clasificación",
+      "question": "La Clínica Somer paga $8.000.000 mensuales fijos de energía eléctrica más $150.000 por cada hora adicional de quirófano en uso nocturno. ¿Cómo se clasifica este costo?",
+      "options": {
+        "A": "Costo variable puro",
+        "B": "Costo fijo comprometido",
+        "C": "Costo semivariable (mixto)",
+        "D": "Costo indirecto fijo"
+      },
+      "correct": "C",
+      "justification": "Un costo semivariable o mixto tiene dos componentes: una parte fija ($8M independiente del uso) y una parte variable ($150.000/hora adicional de quirófano). La energía eléctrica de la Clínica Somer es el ejemplo clásico: siempre hay un cargo base por la conexión y los equipos en stand-by, más un componente que crece con la actividad quirúrgica nocturna. No es variable puro porque tiene una base fija mínima, ni fijo puro porque varía con la actividad."
+    },
+    {
+      "id": 117,
+      "module": "Módulo 1 – Costos hospitalarios y clasificación",
+      "question": "La Clínica Somer destina un quirófano exclusivamente a trasplantes de órganos, renunciando a usarlo para cirugías electivas que generarían $35.000.000 mensuales. Los $35.000.000 no percibidos se denominan:",
+      "options": {
+        "A": "Costo hundido del quirófano",
+        "B": "Costo diferencial de la decisión",
+        "C": "Costo de oportunidad de destinar el quirófano a trasplantes",
+        "D": "Costo evitable de la unidad quirúrgica"
+      },
+      "correct": "C",
+      "justification": "El costo de oportunidad es el beneficio que se sacrifica al elegir una alternativa sobre otra. Al dedicar el quirófano a trasplantes, la Clínica Somer renuncia a $35M/mes de cirugías electivas; eso es el costo de oportunidad. No es un costo hundido (ese sería un valor ya pagado e irrecuperable). No es diferencial (ese compara costos entre opciones sin centrarse en el sacrificio). El costo de oportunidad no aparece en la contabilidad formal pero es clave para decisiones de asignación de recursos en la Somer."
+    },
+    {
+      "id": 118,
+      "module": "Módulo 1 – Costos hospitalarios y clasificación",
+      "question": "La Clínica Somer invirtió $150.000.000 en un estudio de factibilidad para abrir una unidad de radioterapia. Al evaluar si abrir o no la unidad, ¿cómo debe tratarse ese monto en el análisis de decisión?",
+      "options": {
+        "A": "Incluirse como costo inicial del proyecto porque fue invertido con ese fin",
+        "B": "Descontarse de la inversión futura para no contarlo dos veces",
+        "C": "Ignorarse en la decisión porque es un costo hundido irrecuperable",
+        "D": "Amortizarse en los primeros 12 meses de operación de la unidad"
+      },
+      "correct": "C",
+      "justification": "Los costos hundidos (sunk costs) son erogaciones ya realizadas e irrecuperables que no deben influir en decisiones futuras. El estudio de $150M ya se pagó independientemente de lo que decida la Clínica Somer. La decisión de abrir la unidad debe basarse exclusivamente en ingresos y costos futuros esperados. Incluirlo distorsiona el análisis y puede llevar a invertir en un proyecto no rentable solo para 'recuperar' lo gastado, error conocido como sesgo del costo hundido."
+    },
+    {
+      "id": 119,
+      "module": "Módulo 1 – Costos hospitalarios y clasificación",
+      "question": "Una infección intrahospitalaria en la UCI Adultos de la Clínica Somer prolonga la estancia de un paciente 6 días adicionales sin ingreso adicional por parte de la EPS, generando $3.000.000 en insumos extra y tiempo de enfermería adicional. ¿Cómo se clasifica este costo dentro de los costos de calidad?",
+      "options": {
+        "A": "Costo de prevención",
+        "B": "Costo de evaluación",
+        "C": "Costo de falla interna",
+        "D": "Costo de falla externa"
+      },
+      "correct": "C",
+      "justification": "Los costos de calidad se dividen en: prevención (acciones para evitar errores), evaluación (detección de errores), fallas internas (errores dentro de la institución antes del egreso) y fallas externas (errores que impactan al paciente o la comunidad tras el egreso). Una infección intrahospitalaria es una falla interna: ocurre durante la prestación del servicio dentro de la Somer y genera un costo que la institución asume sin poder cobrar los días adicionales a la EPS. Los $3M impactan directamente la rentabilidad de la UCI."
+    },
+    {
+      "id": 120,
+      "module": "Módulo 2 – Presupuesto y control financiero",
+      "question": "La Clínica Somer tiene un margen de contribución de $2.160.000.000 y una utilidad operacional de $1.080.000.000 en el trimestre. ¿Cuál es el Grado de Apalancamiento Operativo (GAO) y qué efecto tendría un incremento de ingresos del 10%?",
+      "options": {
+        "A": "GAO = 1,5; la utilidad operacional crecería un 15%",
+        "B": "GAO = 2,0; la utilidad operacional crecería un 10%, igual que los ingresos",
+        "C": "GAO = 2,0; la utilidad operacional crecería un 20%",
+        "D": "GAO = 3,0; la utilidad operacional crecería un 30%"
+      },
+      "correct": "C",
+      "justification": "GAO = Margen de Contribución ÷ Utilidad Operacional = $2.160M ÷ $1.080M = 2,0. Con un incremento del 10% en ingresos, la utilidad operacional crece 10% × 2,0 = 20%; la nueva UO sería $1.296M. Este GAO refleja que la Clínica Somer tiene una proporción significativa de costos fijos (UCI, nómina asistencial fija, equipos). La misma palanca aplica simétricamente a la baja: una caída del 10% en ingresos reduce la utilidad un 20%, lo que justifica el monitoreo constante del volumen de actividad asistencial."
+    },
+    {
+      "id": 121,
+      "module": "Módulo 2 – Presupuesto y control financiero",
+      "question": "La Clínica Somer aprueba la compra de una resonancia magnética por $1.800.000.000 con vida útil de 10 años. ¿En qué presupuesto se registra esta inversión y cuál es su impacto en el Estado de Resultados del año de compra?",
+      "options": {
+        "A": "En el presupuesto de operación; reduce la utilidad en $1.800.000.000 ese año",
+        "B": "En el presupuesto de capital (CAPEX); solo impacta el P&G mediante la depreciación anual de $180.000.000",
+        "C": "En el presupuesto de tesorería; genera un gasto extraordinario en el P&G por el total pagado",
+        "D": "En el presupuesto de ventas; aumenta los ingresos proyectados por mayor capacidad instalada"
+      },
+      "correct": "B",
+      "justification": "La compra de activos fijos se registra en el presupuesto de capital (CAPEX). No impacta el Estado de Resultados en $1.800M de una vez: bajo NIIF (NIC 16), el equipo se activa y se deprecia a lo largo de su vida útil. Depreciación anual = $1.800M ÷ 10 años = $180M/año, que sí reduce la utilidad gradualmente como CIF. La salida de caja de $1.800M aparece en el flujo de inversión, no en el P&G. Esta distinción es crítica para la Clínica Somer al evaluar el impacto de adquirir equipos de alta tecnología sin distorsionar el resultado operativo del año."
+    },
+    {
+      "id": 122,
+      "module": "Módulo 2 – Presupuesto y control financiero",
+      "question": "El Laboratorio Clínico de la Clínica Somer presupuestó el reactivo de hematología a $8.000/prueba con consumo de 500 pruebas/mes. En octubre, el precio real fue $9.000/prueba y se realizaron 600 pruebas. ¿Cuál es la variación total desfavorable en el costo de este reactivo?",
+      "options": {
+        "A": "$500.000 — variación de precio sobre cantidad estándar: ($9.000−$8.000)×500",
+        "B": "$800.000 — solo variación de cantidad: (600−500)×$8.000",
+        "C": "$1.300.000 — suma de variación de precio ($500.000) más variación de cantidad ($800.000)",
+        "D": "$1.400.000 — costo real ($9.000×600) menos costo estándar ($8.000×500)"
+      },
+      "correct": "D",
+      "justification": "Variación total = Costo real − Costo estándar = ($9.000 × 600) − ($8.000 × 500) = $5.400.000 − $4.000.000 = $1.400.000 desfavorable. La descomposición correcta es: variación de precio = ($9.000−$8.000) × 600 = $600.000 D; variación de cantidad = (600−500) × $8.000 = $800.000 D; variación mixta = $1.000 × 100 = $100.000 D; total = $1.400.000. El error más común (C) suma precio×cantidad estándar más cantidad×precio estándar, perdiendo la variación mixta de $100.000. La variación total siempre es (Precio real × Cantidad real) − (Precio std × Cantidad std)."
+    },
+    {
+      "id": 123,
+      "module": "Módulo 2 – Presupuesto y control financiero",
+      "question": "¿En qué se diferencia el presupuesto de tesorería del Estado de Resultados proyectado para la Clínica Somer?",
+      "options": {
+        "A": "El presupuesto de tesorería incluye los ingresos de EPS aunque no se hayan cobrado; el P&G solo registra cobros efectivos",
+        "B": "El P&G proyectado muestra solo movimientos de efectivo; el presupuesto de tesorería incluye causaciones y depreciaciones",
+        "C": "El presupuesto de tesorería registra entradas y salidas reales de efectivo; el P&G incluye causaciones no monetarias como depreciación y cartera no cobrada",
+        "D": "Ambos son equivalentes cuando la Clínica Somer aplica el principio de caja en su contabilidad"
+      },
+      "correct": "C",
+      "justification": "El presupuesto de tesorería registra cuándo entra y sale el dinero efectivamente (cobros a EPS, pagos de nómina, compra de insumos). El P&G proyectado incluye ingresos causados aunque la EPS no haya pagado aún, y cargos no monetarios como la depreciación del tomógrafo. En la Clínica Somer, donde las EPS suelen pagar con 60–120 días de retraso, puede haber utilidad contable positiva pero flujo de caja negativo en el mismo mes. El analista necesita ambos documentos: uno para la gestión de liquidez y otro para medir la rentabilidad real."
+    },
+    {
+      "id": 124,
+      "module": "Módulo 3 – Indicadores de gestión (KPIs)",
+      "question": "La Clínica Somer tiene 6 quirófanos disponibles 10 horas/día, 25 días/mes. En octubre se registraron 1.050 horas-quirófano efectivamente utilizadas. ¿Cuál es la tasa de utilización quirúrgica?",
+      "options": {
+        "A": "60%",
+        "B": "70%",
+        "C": "75%",
+        "D": "80%"
+      },
+      "correct": "B",
+      "justification": "Capacidad disponible = 6 quirófanos × 10 h/día × 25 días = 1.500 horas-quirófano/mes. Tasa de utilización = 1.050 ÷ 1.500 × 100 = 70%. El 30% restante (450 horas) corresponde a tiempos muertos por cambios de paciente, limpieza y programación ineficiente. La meta en clínicas de alta complejidad supera el 80%. Mejorar al 80% significaría 1.200 horas utilizadas, equivalentes a 150 procedimientos adicionales si cada cirugía promedio toma 1 hora, con impacto directo en ingresos y amortización del costo fijo de los quirófanos."
+    },
+    {
+      "id": 125,
+      "module": "Módulo 3 – Indicadores de gestión (KPIs)",
+      "question": "La Clínica Somer facturó $4.800.000.000 en el trimestre y recibió glosas de EPS por $336.000.000. ¿Cuál es el índice de glosas y qué señal da para la gestión?",
+      "options": {
+        "A": "5,0% — en el límite de alerta pero dentro del rango tolerable del sector",
+        "B": "6,0% — requiere intervención; supera el umbral del 5%",
+        "C": "7,0% — por encima del umbral aceptable del 5%; representa $336M en ingresos en riesgo",
+        "D": "9,3% — señal de colapso en el proceso de facturación y soportes clínicos"
+      },
+      "correct": "C",
+      "justification": "Índice de glosas = $336M ÷ $4.800M × 100 = 7,0%. El umbral aceptable en el sector salud colombiano es máximo 5%. Con 7%, la Clínica Somer tiene $336M de ingresos trimestrales en riesgo de no cobrarse. El analista debe clasificar las glosas por causa: soportes insuficientes (capacitar personal), pertinencia médica (revisar auditoría previa a facturación) o discrepancias de tarifas (verificar parametrización del sistema). Reducir el índice al 5% significaría recuperar $96M adicionales por trimestre."
+    },
+    {
+      "id": 126,
+      "module": "Módulo 3 – Indicadores de gestión (KPIs)",
+      "question": "La Clínica Somer tiene 80 camas de hospitalización y registró 240 egresos en noviembre. ¿Cuál es el giro-cama y qué diferencia aporta respecto al índice ocupacional?",
+      "options": {
+        "A": "Giro-cama = 3,0; es idéntico al índice ocupacional, ambos miden eficiencia de uso de camas",
+        "B": "Giro-cama = 3,0; complementa el IO porque mide cuántos pacientes distintos rotaron por cada cama en el período, no qué % del tiempo estuvo ocupada",
+        "C": "Giro-cama = 0,33; mide la fracción de camas ocupadas respecto al total disponible",
+        "D": "Giro-cama = 3,0; reemplaza al IO en IPS de alta complejidad por ser más preciso"
+      },
+      "correct": "B",
+      "justification": "Giro-cama = Egresos ÷ Camas disponibles = 240 ÷ 80 = 3,0 rotaciones/mes: cada cama fue ocupada por 3 pacientes distintos en noviembre. El IO (% de tiempo ocupado) y el giro-cama son complementarios, no equivalentes. Una UCI puede tener IO alto (90%) pero giro-cama bajo (0,9) porque los pacientes permanecen muchos días. Una sala de cirugía ambulatoria puede tener IO moderado pero giro-cama alto por estancias de pocas horas. Ambos indicadores juntos evalúan si la eficiencia de la Somer se debe a alta ocupación continua o a alta rotación de pacientes."
+    },
+    {
+      "id": 127,
+      "module": "Módulo 3 – Indicadores de gestión (KPIs)",
+      "question": "La consulta externa de la Clínica Somer tiene 8 especialistas con 4 horas de consulta diaria. Cada médico atiende en promedio 5 pacientes por hora durante 22 días hábiles/mes. ¿Cuántas consultas mensuales genera el servicio?",
+      "options": {
+        "A": "2.640 consultas",
+        "B": "3.520 consultas",
+        "C": "4.400 consultas",
+        "D": "5.280 consultas"
+      },
+      "correct": "B",
+      "justification": "Consultas/mes = 8 médicos × 4 h/día × 5 pacientes/h × 22 días = 3.520 consultas. Si el precio promedio por consulta es $90.000, el servicio genera $316.800.000/mes de ingresos potenciales. Si la productividad cae a 4 pac/h por ausentismo, las consultas bajan a 2.816 (−704), con una pérdida de ingreso potencial de $63.360.000/mes. Este indicador permite comparar la producción real con la capacidad instalada y justificar mejoras en la programación de agenda de especialistas."
+    },
+    {
+      "id": 128,
+      "module": "Módulo 4 – Costeo ABC",
+      "question": "En el costeo ABC de la Clínica Somer, ¿cuál de los siguientes ejemplos corresponde a una actividad de nivel INSTALACIÓN (facility-level)?",
+      "options": {
+        "A": "Administrar una dosis de medicamento oncológico a un paciente específico",
+        "B": "Esterilizar un set de instrumental para una cirugía específica",
+        "C": "Mantener vigente la habilitación de la Unidad Funcional de Cáncer ante el Ministerio de Salud",
+        "D": "Preparar el quirófano antes de cada jornada quirúrgica del día"
+      },
+      "correct": "C",
+      "justification": "Las actividades de nivel instalación sostienen la capacidad general de la organización sin poder trazarse a ningún paciente, lote o servicio específico. Mantener la habilitación de la UFC existe independientemente de cuántos pacientes oncológicos se atiendan ese mes. Las actividades de nivel unitario (A: dosis por paciente) ocurren por cada unidad de servicio; nivel lote (B: esterilización de un set) por cada grupo de procedimientos; nivel servicio (D: preparar el quirófano) por cada tipo de servicio. Esta clasificación determina los inductores apropiados en el modelo ABC de la Somer."
+    },
+    {
+      "id": 129,
+      "module": "Módulo 4 – Costeo ABC",
+      "question": "El Banco de Sangre de la Clínica Somer tiene un costo mensual de $28.000.000 y apoya principalmente cirugías cardíacas, trasplantes y urgencias con politraumatismo. ¿Cuál es el inductor (cost driver) más apropiado para asignar su costo a los servicios?",
+      "options": {
+        "A": "Número total de egresos de la Clínica Somer en el mes",
+        "B": "Número de días-cama ocupados en hospitalización general",
+        "C": "Número de unidades de hemoderivados procesadas y entregadas por servicio",
+        "D": "Número de médicos especialistas que solicitaron el servicio en el período"
+      },
+      "correct": "C",
+      "justification": "El inductor debe reflejar cómo cada servicio consume realmente la actividad del Banco de Sangre. Las unidades de hemoderivados entregadas por servicio capturan el consumo real: un trasplante puede requerir 8–12 unidades; una cirugía electiva simple, 2; hospitalización general, ninguna. Usar egresos totales (A) distribuiría el costo por igual entre servicios sin importar cuánta sangre consumen, generando subsidios cruzados. Días-cama (B) penalizaría las UCI por duración, no por consumo real. El número de médicos (D) no guarda relación causal con el uso de hemoderivados."
+    },
+    {
+      "id": 130,
+      "module": "Módulo 4 – Costeo ABC",
+      "question": "La Unidad Funcional de Cáncer de la Clínica Somer tiene tres actividades: Preparación farmacológica ($12.000.000/mes, 400 preparaciones), Aplicación de quimioterapia ($18.000.000/mes, 200 sesiones) y Seguimiento médico ($6.000.000/mes, 100 controles). Un ciclo completo requiere 1 preparación + 1 sesión + 1 control. ¿Cuál es el costo ABC por ciclo completo?",
+      "options": {
+        "A": "$90.000",
+        "B": "$120.000",
+        "C": "$150.000",
+        "D": "$180.000"
+      },
+      "correct": "D",
+      "justification": "Tasa por actividad: Preparación = $12M ÷ 400 = $30.000/prep; Aplicación = $18M ÷ 200 = $90.000/sesión; Seguimiento = $6M ÷ 100 = $60.000/control. Costo por ciclo = $30.000 + $90.000 + $60.000 = $180.000. Si con costeo tradicional se asignaba $120.000 por ciclo (distribuyendo los $36M entre 300 servicios), el ABC revela un costo real 50% mayor. Esta diferencia impacta directamente la negociación de tarifas con EPS oncológicas: si la EPS paga $160.000 por ciclo, la UFC opera con déficit de $20.000 por ciclo que el costeo tradicional no detectaba."
+    },
+    {
+      "id": 131,
+      "module": "Módulo 4 – Costeo ABC",
+      "question": "¿En cuál servicio de la Clínica Somer el costeo ABC generaría menor valor respecto a su costo de implementación?",
+      "options": {
+        "A": "Unidad de Trasplante de Órganos, con 4 tipos de procedimiento de costo muy diferente entre sí",
+        "B": "UCI Adultos con pacientes de complejidad y estancias muy variables",
+        "C": "Toma de muestras de laboratorio rutinario (sangre venosa, proceso idéntico para todos los pacientes)",
+        "D": "Unidad Funcional de Cáncer con 6 protocolos oncológicos de costo diferenciado"
+      },
+      "correct": "C",
+      "justification": "El ABC agrega mayor valor cuando los servicios son heterogéneos y consumen recursos en proporciones distintas. En la toma de muestras de laboratorio rutinario, el proceso es casi idéntico para todos los pacientes: misma técnica, mismo tiempo, mismo insumo por muestra. El inductor natural es simplemente el número de muestras, lo que hace innecesario el ABC. Un sistema de costeo directo simple genera la misma información a mucho menor costo de implementación. En Trasplante (A), UCI (B) y UFC (D), la diversidad de complejidad entre procedimientos justifica plenamente el esfuerzo del ABC."
+    },
+    {
+      "id": 132,
+      "module": "Módulo 4 – Costeo ABC",
+      "question": "En el costeo ABC de la Clínica Somer, ¿cuál es la diferencia entre un inductor de recurso (resource driver) y un inductor de actividad (activity driver)?",
+      "options": {
+        "A": "El inductor de recurso mide costos de insumos directos; el de actividad mide solo los costos indirectos",
+        "B": "El inductor de recurso asigna costos del recurso a las actividades; el de actividad asigna el costo de las actividades a los servicios prestados",
+        "C": "Ambos son intercambiables; cualquier inductor puede usarse en las dos etapas del ABC sin distinción",
+        "D": "El inductor de actividad se usa solo en el Time-Driven ABC; el de recurso, en el ABC tradicional"
+      },
+      "correct": "B",
+      "justification": "El ABC opera en dos etapas: (1) los costos de RECURSOS se asignan a ACTIVIDADES usando un resource driver. Ejemplo en la Somer: el costo del personal de Esterilización se distribuye entre 'esterilizar set básico' y 'esterilizar set complejo' según horas trabajadas en cada tipo. (2) El costo acumulado en cada ACTIVIDAD se asigna a los SERVICIOS usando un activity driver. Ejemplo: la actividad 'esterilizar set complejo' se asigna a Trasplante y Cirugía Cardíaca según número de sets procesados por servicio. Confundir las dos etapas reproduce el mismo error del costeo tradicional."
+    },
+    {
+      "id": 133,
+      "module": "Módulo 5 – Normativa sector salud Colombia",
+      "question": "¿Cuál fue el principal aporte de la Ley 1438 de 2011 al SGSSS, relevante para la Clínica Somer como IPS de alta complejidad del Oriente Antioqueño?",
+      "options": {
+        "A": "Creó el SGSSS con los regímenes contributivo y subsidiado y las EPS como aseguradoras",
+        "B": "Estableció la ADRES como entidad administradora de los recursos del sistema",
+        "C": "Fortaleció la Atención Primaria en Salud y creó las Redes Integradas de Servicios para reducir la fragmentación asistencial",
+        "D": "Definió un Manual Único de Tarifas obligatorio para todas las IPS del país"
+      },
+      "correct": "C",
+      "justification": "La Ley 1438 de 2011 reformó el SGSSS con énfasis en: (1) Atención Primaria en Salud como estrategia para reducir hospitalizaciones evitables, (2) Redes Integradas de Servicios de Salud para articular IPS de diferente nivel de complejidad, y (3) ajustes en financiamiento y control de glosas. Para la Clínica Somer, las RISS son clave: como IPS de alta complejidad, recibe pacientes remitidos por IPS de menor nivel del Oriente Antioqueño y debe articular la atención dentro de la red regional. La Ley 100/1993 (A) creó el sistema; ADRES (B) fue creada por el Decreto 1429 de 2016; no existe Manual Único de Tarifas obligatorio (D)."
+    },
+    {
+      "id": 134,
+      "module": "Módulo 5 – Normativa sector salud Colombia",
+      "question": "Una EPS glosa una factura de $45.000.000 de la Clínica Somer argumentando 'pertinencia no demostrada del procedimiento de hemodiálisis'. Según el proceso normativo, ¿cuál es el paso inmediato que debe seguir la IPS?",
+      "options": {
+        "A": "Aceptar la glosa y registrar el menor ingreso en contabilidad para no generar conflictos con la EPS",
+        "B": "Iniciar de inmediato proceso jurídico ante la Supersalud por incumplimiento contractual",
+        "C": "Presentar respuesta a la glosa con los soportes clínicos (historia clínica, órdenes médicas, protocolos) dentro del plazo contractual pactado",
+        "D": "Solicitar a la ADRES que medie entre IPS y EPS para resolver la controversia"
+      },
+      "correct": "C",
+      "justification": "El proceso normativo de glosas sigue una ruta: (1) EPS glosa dentro del plazo pactado, (2) IPS responde con soportes clínicos dentro del plazo contractual (usualmente 15–30 días hábiles), (3) si persiste el desacuerdo, conciliación, (4) si no hay acuerdo, proceso jurídico. La Clínica Somer debe responder con historia clínica, órdenes médicas y protocolos de hemodiálisis que sustenten la pertinencia. Aceptar de inmediato (A) implica perder $45M sin análisis. La ADRES (D) administra recursos del sistema pero no media en glosas entre IPS y EPS. El proceso jurídico (B) es el último recurso."
+    },
+    {
+      "id": 135,
+      "module": "Módulo 5 – Normativa sector salud Colombia",
+      "question": "¿Cuál es la principal diferencia en el proceso de facturación de la Clínica Somer entre un paciente del régimen contributivo y uno del régimen subsidiado?",
+      "options": {
+        "A": "Los pacientes del régimen subsidiado no generan RIPS; solo el contributivo está obligado a reportarlos",
+        "B": "En el contributivo, la EPS paga la totalidad del servicio; en el subsidiado, el paciente paga copago sin ningún tope anual",
+        "C": "En el contributivo, la EPS paga directamente a la IPS según contrato; en el subsidiado, el pagador puede ser la EPS-S o el ente territorial según el esquema de aseguramiento",
+        "D": "La facturación es idéntica para ambos regímenes; la única diferencia es el porcentaje de IVA aplicado"
+      },
+      "correct": "C",
+      "justification": "En el régimen contributivo, la EPS (Sura, Nueva EPS, Sanitas) paga directamente a la Clínica Somer según el contrato de prestación de servicios. En el subsidiado, el pagador puede ser la EPS-S (Mutual Ser, Coosalud, Emssanar) o, en algunos esquemas, el municipio o departamento, con diferente flujo de pago y tiempos de recaudo. Ambos regímenes exigen RIPS (A es falso; Resolución 3374 de 2000 aplica a todos). Los copagos del subsidiado sí tienen topes anuales definidos por el SGSSS (B es falso). La diferencia en pagador afecta directamente el análisis de cartera y el riesgo de recaudo de la Somer."
+    },
+    {
+      "id": 136,
+      "module": "Módulo 5 – Normativa sector salud Colombia",
+      "question": "La Clínica Somer quiere abrir un servicio de Radioterapia. ¿Qué exige la normativa vigente de habilitación de servicios de salud antes de prestar el servicio?",
+      "options": {
+        "A": "Solo registrarse ante la Cámara de Comercio de Rionegro y notificar a la Supersalud",
+        "B": "Cumplir estándares de habilitación en capacidad instalada, recurso humano, dotación y procesos; inscribirse en el REPS y obtener concepto favorable de la Secretaría de Salud Departamental",
+        "C": "Obtener primero la certificación de acreditación de ICONTEC como requisito previo para habilitar cualquier servicio nuevo",
+        "D": "Firmar contratos previos con al menos dos EPS del régimen contributivo que garanticen demanda mínima del servicio"
+      },
+      "correct": "B",
+      "justification": "La normativa de habilitación (Resolución 3100 de 2019 y sus actualizaciones) exige que la Clínica Somer, para habilitar Radioterapia: (1) cumpla los estándares en capacidad instalada (equipos de radioterapia de precisión), recurso humano (oncólogos radioterapeútas, físico médico), dotación, medicamentos y procesos; (2) se inscriba en el Registro Especial de Prestadores de Servicios de Salud (REPS); y (3) obtenga concepto favorable de la Secretaría de Salud de Antioquia. La acreditación ICONTEC (C) es voluntaria y posterior a la habilitación. Los contratos con EPS (D) vienen después de estar habilitada."
+    },
+    {
+      "id": 137,
+      "module": "Módulo 5 – Normativa sector salud Colombia",
+      "question": "¿Por qué es relevante el RETHUS (Registro Único Nacional del Talento Humano en Salud) para el analista de costos de la Clínica Somer al auditar la facturación de honorarios médicos?",
+      "options": {
+        "A": "Porque el RETHUS establece las tarifas máximas de honorarios que puede cobrar cada especialista a las EPS",
+        "B": "Porque permite verificar que los profesionales que generaron los actos facturados están habilitados para ejercer en Colombia, previniendo glosas por este concepto",
+        "C": "Porque el RETHUS certifica la calidad técnica de los procedimientos realizados por cada médico registrado",
+        "D": "Porque las EPS consultan el RETHUS para determinar el copago que debe pagar cada paciente según el especialista que lo atendió"
+      },
+      "correct": "B",
+      "justification": "El RETHUS es el registro oficial de profesionales y auxiliares de la salud habilitados para ejercer en Colombia (Ley 1164 de 2007). Para el analista de costos de la Somer, su relevancia está en la prevención de glosas: las EPS pueden objetar honorarios si el médico firmante de la historia clínica no está activo en RETHUS o tiene su registro vencido. Verificar la vigencia del registro de especialistas antes de facturar evita glosas evitables que pueden tardar meses en resolverse. El RETHUS no define tarifas (A), no certifica calidad de procedimientos (C) ni determina copagos (D)."
+    },
+    {
+      "id": 138,
+      "module": "Módulo 6 – Contabilidad aplicada a costos",
+      "question": "La Clínica Somer gestiona inventarios de medicamentos oncológicos de alto costo en un contexto de inflación de insumos del 8% anual. ¿Cuál método de valoración de inventarios genera mayor costo de ventas en un período inflacionario?",
+      "options": {
+        "A": "Promedio ponderado, porque distribuye el aumento de precio entre todas las unidades del período",
+        "B": "FIFO (primeras en entrar, primeras en salir), porque consume primero las unidades más baratas dejando en inventario las más caras",
+        "C": "LIFO (últimas en entrar, primeras en salir), porque consume primero las unidades más costosas adquiridas recientemente",
+        "D": "Costo estándar, porque usa un precio predeterminado independiente de la inflación real"
+      },
+      "correct": "C",
+      "justification": "En período de inflación, LIFO genera el mayor costo de ventas porque consume primero las unidades adquiridas más recientemente (las más caras). FIFO genera el menor costo de ventas (consume las más baratas primero). El promedio ponderado produce un resultado intermedio. Nota crítica: LIFO no está permitido bajo NIIF (NIC 2 / Sección 13 de NIIF para PYMES), que solo acepta FIFO y promedio ponderado. La Clínica Somer debe elegir entre estos dos últimos y aplicarlo consistentemente. En inflación sostenida, FIFO reporta menor costo y mayor utilidad; promedio ponderado suaviza el efecto."
+    },
+    {
+      "id": 139,
+      "module": "Módulo 6 – Contabilidad aplicada a costos",
+      "question": "Sura EPS entrega un anticipo de $200.000.000 a la Clínica Somer para garantizar disponibilidad de camas UCI durante el siguiente trimestre. ¿En qué cuenta se registra inicialmente ese anticipo y cuándo se convierte en ingreso operacional?",
+      "options": {
+        "A": "Inmediatamente como ingreso operacional (Cuenta 4105); el dinero ingresó y ya es de la Somer",
+        "B": "Como pasivo (anticipos recibidos); se reconoce como ingreso a medida que se prestan los servicios a pacientes de Sura EPS",
+        "C": "Como activo corriente en caja; el ingreso se registra al vencimiento del trimestre en una sola cuota",
+        "D": "Como patrimonio (superávit de capital); se reclasifica a ingresos al finalizar el contrato anual"
+      },
+      "correct": "B",
+      "justification": "Bajo el principio de causación y NIIF 15, el ingreso se reconoce cuando se satisface la obligación de desempeño, no cuando se recibe el dinero. El anticipo de $200M obliga a la Clínica Somer a prestar servicios futuros a Sura EPS: mientras no los preste, tiene una deuda (pasivo). Se registra en 'Anticipos recibidos de clientes' (pasivo corriente). A medida que se atienden pacientes de Sura EPS, se debita el anticipo y se acredita el ingreso operacional (Cuenta 4105). Si al final del trimestre queda saldo no ejecutado, debe devolverse o renegociarse. Reconocerlo todo como ingreso al recibirlo (A) infla artificialmente los resultados."
+    },
+    {
+      "id": 140,
+      "module": "Módulo 6 – Contabilidad aplicada a costos",
+      "question": "La Clínica Somer adquirió un sistema de información hospitalaria (HIS) por $180.000.000 con vida útil de 5 años y valor residual cero. ¿Cuál es la amortización mensual y en qué cuenta del PUC puede registrarse el cargo?",
+      "options": {
+        "A": "$3.000.000/mes — siempre en gastos administrativos (Clase 5), porque el software no presta servicios directamente",
+        "B": "$3.000.000/mes — en Clase 5 si el HIS es de uso administrativo, o en Clase 6 como CIF si es de uso asistencial",
+        "C": "$15.000.000/mes — se amortiza aceleradamente en el primer año por ser tecnología de rápida obsolescencia",
+        "D": "$1.500.000/mes — se usa vida útil de 10 años por ser un activo intangible de largo plazo en el sector salud"
+      },
+      "correct": "B",
+      "justification": "Amortización mensual = $180M ÷ 5 años ÷ 12 meses = $3.000.000/mes. La clasificación de cuenta depende del uso: si el HIS gestiona historias clínicas, órdenes médicas y resultados clínicos (uso asistencial), puede registrarse en Clase 6 como CIF. Si es exclusivamente para nómina, contabilidad o administración, va en Clase 5. Un HIS hospitalario integral generalmente tiene componentes mixtos y puede distribuirse entre ambas clases según el uso real de cada módulo. La opción A asume incorrectamente uso exclusivamente administrativo; la vida útil de 5 años (no 10 ni 1) es estándar para software empresarial."
+    },
+    {
+      "id": 141,
+      "module": "Módulo 6 – Contabilidad aplicada a costos",
+      "question": "La Clínica Somer presta servicios de UCI a un paciente de Nueva EPS durante 21 días de diciembre ($900.000/día = $18.900.000 total). Nueva EPS paga en febrero. ¿Cuándo debe reconocer el ingreso la Clínica Somer?",
+      "options": {
+        "A": "En febrero, cuando recibe el pago efectivo; hasta entonces el servicio no es un ingreso confirmado",
+        "B": "En diciembre, cuando presta el servicio; la cuenta por cobrar queda en Deudores EPS (activo corriente)",
+        "C": "Solo al 31 de diciembre si hay contrato firmado; si el contrato está en renovación, en la fecha de pago",
+        "D": "Distribuido entre diciembre y febrero: 50% en cada mes para reflejar la incertidumbre del cobro"
+      },
+      "correct": "B",
+      "justification": "Bajo el principio de causación y NIIF 15, el ingreso se reconoce cuando se satisface la obligación de desempeño —cuando se presta el servicio—, no cuando se cobra. La Clínica Somer presta el servicio en diciembre: registra $18.900.000 como ingreso operacional (Cuenta 4105) y $18.900.000 en Cuentas por Cobrar — Deudores EPS. El pago en febrero solo afecta el flujo de caja: entra efectivo y se cancela la cuenta por cobrar. Esta distinción explica por qué la Somer puede mostrar utilidad contable en diciembre mientras tiene tensión de liquidez, fenómeno frecuente con EPS que pagan a 60–120 días."
+    },
+    {
+      "id": 142,
+      "module": "Módulo 7 – Caso integral de rentabilidad",
+      "question": "Con los datos del caso Clínica Somer: utilidad operacional $1.080.000.000, depreciación de equipos incluida en los costos $180.000.000 y amortizaciones de intangibles $20.000.000. ¿Cuál es el EBITDA del trimestre?",
+      "options": {
+        "A": "$1.080.000.000",
+        "B": "$1.200.000.000",
+        "C": "$1.260.000.000",
+        "D": "$1.280.000.000"
+      },
+      "correct": "D",
+      "justification": "EBITDA = Utilidad Operacional + Depreciación + Amortizaciones = $1.080M + $180M + $20M = $1.280M. El EBITDA supera la utilidad operacional porque 'devuelve' los cargos contables no monetarios. Para la Clínica Somer, con equipos de alta tecnología (ECMO, tomógrafo, resonancia, quirófanos equipados), la depreciación es un cargo significativo que reduce la utilidad contable pero no implica una salida real de caja en ese período. El EBITDA de $1.280M representa la generación de caja operativa real, indicador clave para evaluar capacidad de pago de deuda y para comparar eficiencia operativa con otras IPS del sector."
+    },
+    {
+      "id": 143,
+      "module": "Módulo 7 – Caso integral de rentabilidad",
+      "question": "Extendiendo el análisis del caso Clínica Somer: costos fijos trimestrales de $1.080.000.000 y margen de contribución del 40% sobre ingresos. ¿Cuál es el punto de equilibrio en ingresos y cuál es el margen de seguridad con ingresos actuales de $5.400.000.000?",
+      "options": {
+        "A": "PE = $2.160.000.000; margen de seguridad = 60%",
+        "B": "PE = $2.700.000.000; margen de seguridad = 50%",
+        "C": "PE = $3.240.000.000; margen de seguridad = 40%",
+        "D": "PE = $4.320.000.000; margen de seguridad = 20%"
+      },
+      "correct": "B",
+      "justification": "PE en ingresos = Costos fijos ÷ MC% = $1.080M ÷ 0,40 = $2.700M. Margen de seguridad = ($5.400M − $2.700M) ÷ $5.400M × 100 = 50%. Los ingresos podrían caer hasta un 50% antes de que la Clínica Somer entre en pérdida operacional. Un margen de seguridad del 50% es robusto, pero dada la alta concentración en pocas EPS y el GAO de 2,0, el equipo de costos debe monitorear mensualmente si cambios en el mix de pagadores o reducciones de tarifas comprimen ese margen hacia niveles de alerta (por debajo del 30%)."
+    },
+    {
+      "id": 144,
+      "module": "Módulo 7 – Caso integral de rentabilidad",
+      "question": "En el caso Clínica Somer: la UCI Adultos representa el 30% de ingresos ($1.620.000.000) y el 45% de costos ($1.944.000.000); hospitalización general representa el 50% de ingresos ($2.700.000.000) y el 35% de costos ($1.512.000.000). ¿Cuál conclusión es técnicamente correcta?",
+      "options": {
+        "A": "Ambos servicios son rentables; la UCI tiene un margen ajustado pero positivo",
+        "B": "La hospitalización general subsidia a la UCI Adultos, que opera con un déficit de $324.000.000",
+        "C": "La UCI es más rentable porque sus tarifas son más altas al atender mayor complejidad",
+        "D": "El déficit de la UCI no debe analizarse porque es un servicio estratégico que opera bajo lógica diferente"
+      },
+      "correct": "B",
+      "justification": "UCI: ingresos $1.620M − costos $1.944M = déficit de $324M. Hospitalización general: ingresos $2.700M − costos $1.512M = superávit de $1.188M. La hospitalización subsidia a la UCI. Este subsidio cruzado es frecuente en IPS de alta complejidad: los servicios de menor complejidad financian los estratégicamente imprescindibles. La decisión de mantener la UCI no puede tomarse solo con criterio financiero (es el servicio de mayor reputación y referenciación regional), pero el analista debe visibilizarlo con cifras y proponer metas de reducción del déficit a través de renegociación de tarifas o eficiencia en costos variables."
+    },
+    {
+      "id": 145,
+      "module": "Módulo 7 – Caso integral de rentabilidad",
+      "question": "Una EPS que concentra el 35% de los ingresos de la Clínica Somer ($5.400.000.000) reduce sus tarifas un 12%. Asumiendo que los costos permanecen constantes en $4.320.000.000, ¿en cuánto cae la utilidad operacional actual de $1.080.000.000?",
+      "options": {
+        "A": "$226.800.000 de reducción; la nueva utilidad operacional es $853.200.000",
+        "B": "$189.000.000 de reducción; la nueva utilidad operacional es $891.000.000",
+        "C": "$648.000.000 de reducción; la nueva utilidad operacional es $432.000.000",
+        "D": "$453.600.000 de reducción; la nueva utilidad operacional es $626.400.000"
+      },
+      "correct": "A",
+      "justification": "Ingresos de esa EPS = $5.400M × 35% = $1.890M. Reducción de ingresos = $1.890M × 12% = $226.800.000. Con costos fijos en $4.320M, nueva utilidad = ($5.400M − $226,8M) − $4.320M = $853,2M. La caída del 21% en utilidad ($226,8M ÷ $1.080M) demuestra el riesgo de concentración: una negociación desfavorable con un solo pagador impacta severamente la rentabilidad. El analista de costos debe presentar este escenario de sensibilidad a la gerencia antes de cada renovación de contrato con EPS, sustentado en el costo real de los servicios prestados."
+    },
+    {
+      "id": 146,
+      "module": "Módulo 7 – Caso integral de rentabilidad",
+      "question": "Con los datos del caso Clínica Somer: margen de contribución $2.160.000.000 y utilidad operacional $1.080.000.000. ¿Cuál es el GAO y qué efecto produciría un crecimiento de ingresos del 15%?",
+      "options": {
+        "A": "GAO = 1,5; la utilidad operacional crecería un 15%, igual que los ingresos",
+        "B": "GAO = 2,0; la utilidad operacional crecería un 30%, de $1.080M a $1.404M",
+        "C": "GAO = 2,0; la utilidad operacional crecería un 15%, proporcional al incremento de ingresos",
+        "D": "GAO = 3,0; la utilidad operacional crecería un 45%, de $1.080M a $1.566M"
+      },
+      "correct": "B",
+      "justification": "GAO = Margen de Contribución ÷ Utilidad Operacional = $2.160M ÷ $1.080M = 2,0. Con un incremento de ingresos del 15%, la utilidad operacional crece 15% × 2,0 = 30%; nueva UO = $1.080M × 1,30 = $1.404M. Simétricamente, una caída del 15% en ingresos reduciría la utilidad un 30% (a $756M). El GAO justifica la estrategia de aumentar el volumen de actividad en servicios con costos fijos ya cubiertos —como consulta de especialidades o procedimientos ambulatorios— donde cada ingreso adicional tiene el mayor impacto sobre la utilidad."
+    },
+    {
+      "id": 147,
+      "module": "Módulo 7 – Caso integral de rentabilidad",
+      "question": "Dado el análisis completo del caso Clínica Somer (IO=80%, margen operativo=20%, GAO=2,0, UCI con déficit subsidiada por hospitalización, 35% de ingresos concentrados en una sola EPS), ¿cuál recomendación es financieramente más fundamentada?",
+      "options": {
+        "A": "Cerrar la UCI Adultos para eliminar el déficit de $324M y mejorar la rentabilidad global inmediatamente",
+        "B": "Reducir el margen de contribución para captar más pacientes particulares y disminuir la dependencia de EPS",
+        "C": "Diversificar la base de pagadores ampliando contratos con otras EPS y desarrollando medicina prepagada, mientras se optimizan los costos de la UCI sin cerrarla",
+        "D": "Exigir a la EPS concentrada un aumento del 20% en tarifas para compensar el déficit de la UCI"
+      },
+      "correct": "C",
+      "justification": "Cerrar la UCI (A) eliminaría el servicio más diferenciador de la Somer en el Oriente Antioqueño y generaría pérdida de pacientes remitidos, afectando toda la cadena de ingresos. Reducir el margen de contribución (B) agravaría la situación financiera. Exigir alzas unilaterales del 20% (D) podría llevar a la EPS a contratar con otra IPS, agravando la concentración. La estrategia correcta combina: diversificar pagadores para reducir la vulnerabilidad del 35%, desarrollar canales de menor dependencia (medicina prepagada, particular), y optimizar costos de UCI sin sacrificar el servicio estratégico. Este es el enfoque del Analista de Costos con visión institucional."
+    },
+    {
+      "id": 148,
+      "module": "Módulo 8 – Criterio profesional, estrategia e institucional Somer",
+      "question": "El analista de costos descubre que el servicio de cardiología intervencionista, liderado por un médico accionista de la Clínica Somer, registra el mayor déficit operativo del trimestre: $280.000.000. ¿Cuál es la conducta profesional correcta?",
+      "options": {
+        "A": "No mencionar el hallazgo para evitar conflictos institucionales con el médico-accionista",
+        "B": "Informarlo al área de costos interna pero omitirlo del informe oficial a la gerencia",
+        "C": "Presentar el hallazgo a la gerencia con datos objetivos enfocados en el servicio y proponer un plan de análisis de causas y mejora",
+        "D": "Comunicarlo directamente al médico-accionista antes de reportarlo a la gerencia para que prepare su respuesta"
+      },
+      "correct": "C",
+      "justification": "La ética profesional del analista de costos exige objetividad e independencia: los hallazgos financieros no pueden suprimirse por el estatus de quienes involucran. La conducta correcta es presentar el dato a la gerencia enfocado en el servicio (no en la persona) con propuesta constructiva de análisis de causas. No reportarlo (A y B) viola los principios de transparencia e incumple las responsabilidades del cargo. Comunicarlo al médico primero (D) puede interpretarse como filtración de información confidencial y compromete la independencia del análisis. El analista es técnico y objetivo; no árbitro de conflictos entre accionistas."
+    },
+    {
+      "id": 149,
+      "module": "Módulo 8 – Criterio profesional, estrategia e institucional Somer",
+      "question": "El jefe médico de la UCI Adultos no comprende por qué le exigen reducir costos si la ocupación está al 90%, el mejor resultado en 3 años. ¿Cuál es la forma más efectiva que tiene el analista de costos para explicar la situación?",
+      "options": {
+        "A": "Enviar el estado de resultados detallado de la UCI para que el jefe médico lo analice directamente",
+        "B": "Mostrar que alta ocupación no equivale a rentabilidad: el costo por paciente-día supera la tarifa pactada con la EPS, por lo que cada paciente adicional genera una pérdida incremental",
+        "C": "Indicarle que las decisiones financieras no son de su competencia y que debe acatar las directrices del área de costos",
+        "D": "Proponer subir las tarifas a las EPS para resolver la brecha sin modificar la estructura de costos de la UCI"
+      },
+      "correct": "B",
+      "justification": "La comunicación efectiva con profesionales no financieros requiere traducir conceptos abstractos a términos concretos de su realidad. La clave es mostrar un ejemplo unitario: 'Por cada paciente-día, la UCI recibe $850.000 de la EPS pero gasta $1.050.000 atendiéndolo. A 90% de ocupación, perdemos $200.000 × 22 pacientes/día = $4.400.000 diarios'. Este enfoque concreto es más persuasivo que un informe financiero (A). La opción C destruye la colaboración interdisciplinaria imprescindible para implementar mejoras. Subir tarifas (D) depende de negociaciones externas, no del jefe médico."
+    },
+    {
+      "id": 150,
+      "module": "Módulo 8 – Criterio profesional, estrategia e institucional Somer",
+      "question": "La Clínica Somer tiene un índice de glosas del 7% sobre $4.800.000.000 de facturación trimestral. ¿Cuál acción representa el rol MÁS PROACTIVO del analista de costos para reducir las glosas estructuralmente?",
+      "options": {
+        "A": "Registrar el 7% como provisión de cartera al inicio de cada período y ajustar al cierre",
+        "B": "Clasificar las glosas por tipo de causa (soportes, pertinencia, tarifas), identificar los 3 más frecuentes y trabajar con facturación y auditores médicos en eliminar las causas raíz",
+        "C": "Solicitar a la gerencia jurídica que inicie procesos contra todas las EPS que glosen facturas de la Somer",
+        "D": "Reducir las tarifas cobradas a las EPS para que tengan menos motivos para objetarlas"
+      },
+      "correct": "B",
+      "justification": "El rol proactivo del analista trasciende el registro contable: clasificar las glosas por causa revela si el problema es de soportes (capacitar personal asistencial en registro clínico), de pertinencia (implementar auditoría previa a facturación) o de tarifas (corregir parametrización del sistema). Con 7% = $336M en riesgo trimestral, reducir al 4% libera $144M adicionales por trimestre. La provisión contable (A) mitiga el impacto financiero pero no resuelve la causa. El proceso jurídico (C) es lento, costoso y debe ser el último recurso. Reducir tarifas (D) reduciría ingresos globales sin atacar el problema de fondo."
+    },
+    {
+      "id": 151,
+      "module": "Módulo 8 – Criterio profesional, estrategia e institucional Somer",
+      "question": "La Clínica Somer tiene tres servicios deficitarios simultáneos: UCI Neonatal (déficit $180M/trimestre), Urgencias ($90M/trimestre) y Laboratorio Clínico ($45M/trimestre). El analista solo puede hacer un análisis profundo este mes. ¿Qué criterio es más adecuado para priorizar?",
+      "options": {
+        "A": "Analizar primero el Laboratorio porque tiene el menor déficit y es el más fácil de resolver rápidamente",
+        "B": "Analizar en orden alfabético para mantener objetividad y evitar sesgos de percepción",
+        "C": "Priorizar la UCI Neonatal por su mayor impacto financiero, su alta complejidad asistencial y el mayor riesgo institucional de no intervenir a tiempo",
+        "D": "Priorizar Urgencias porque es el servicio más visible para pacientes y la comunidad"
+      },
+      "correct": "C",
+      "justification": "La priorización técnica considera: (1) impacto financiero —UCI Neonatal acumula $180M de déficit, el más alto—, (2) irreversibilidad —los costos de la UCI Neonatal tienden a escalar y las consecuencias de una acción tardía son graves tanto financiera como asistencialmente—, y (3) potencial de mejora —los déficits en UCI suelen tener causas identificables como tarifas desactualizadas o inductores de costo mal asignados—. Empezar por lo más pequeño (A) optimiza el tiempo pero no el valor del análisis. El criterio alfabético (B) no es técnico. La visibilidad (D) no es criterio financiero válido para priorizar análisis de costos."
+    },
+    {
+      "id": 152,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "El Estado de Resultados de la Clínica Somer muestra ingresos operacionales de $9.500.000.000 y costos de prestación de servicios de $6.840.000.000. ¿Cuál es el peso relativo de los costos y cómo se interpreta respecto al sector IPS de alta complejidad en Colombia?",
+      "options": {
+        "A": "60% — por debajo del estándar del sector; indica eficiencia excepcional en control de costos",
+        "B": "68% — dentro del rango óptimo (65–75%) con buena holgura; gestión de costos satisfactoria",
+        "C": "72% — en la parte alta del rango aceptable (65–75%); señal de alerta para revisar la estructura de costos",
+        "D": "80% — crítico; la Clínica Somer está en zona de pérdida operacional inminente"
+      },
+      "correct": "C",
+      "justification": "Análisis vertical: $6.840M ÷ $9.500M × 100 = 72%. En el análisis vertical del P&G, cada partida se expresa como porcentaje de los ingresos totales. Para IPS de alta complejidad en Colombia, el rango aceptable de costos asistenciales sobre ingresos es aproximadamente 65–75%. El 72% está dentro del rango pero en la parte alta, lo que deja solo un 28% para cubrir gastos administrativos, carga financiera e impuestos antes de entrar en pérdida. El analista debe identificar qué rubros de costo crecieron más que los ingresos comparando con períodos anteriores mediante análisis horizontal."
+    },
+    {
+      "id": 153,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "La Clínica Somer tiene activos corrientes de $4.500.000.000 (incluye inventarios de medicamentos y material médico por $800.000.000) y pasivos corrientes de $2.500.000.000. ¿Cuáles son la razón corriente y la prueba ácida?",
+      "options": {
+        "A": "RC = 1,80 / PA = 1,68 — los inventarios son un componente menor de la liquidez de la Somer",
+        "B": "RC = 1,80 / PA = 1,48 — los inventarios de $800M reducen la liquidez inmediata de forma significativa",
+        "C": "RC = 1,48 / PA = 1,80 — la prueba ácida es siempre mayor que la razón corriente",
+        "D": "RC = 2,25 / PA = 1,80 — la Clínica Somer tiene exceso de liquidez en ambos indicadores"
+      },
+      "correct": "B",
+      "justification": "RC = $4.500M ÷ $2.500M = 1,80. Prueba ácida = ($4.500M − $800M) ÷ $2.500M = $3.700M ÷ $2.500M = 1,48. La prueba ácida excluye los inventarios porque los medicamentos y material médico no son inmediatamente convertibles en efectivo. La diferencia entre 1,80 y 1,48 muestra que los inventarios representan el 17,8% de los activos corrientes, una proporción relevante. Una PA de 1,48 es saludable (superior a 1,0): la Somer puede cubrir sus pasivos corrientes con activos líquidos sin necesidad de liquidar inventarios. La opción C invierte una relación matemáticamente imposible: la PA nunca supera la RC."
+    },
+    {
+      "id": 154,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "La Clínica Somer reporta: EBITDA $1.280.000.000, impuesto de renta pagado $180.000.000, aumento en capital de trabajo neto $120.000.000 (mayor cartera por cobrar a EPS) y CAPEX $300.000.000 en equipos. ¿Cuál es el Flujo de Caja Libre (FCF)?",
+      "options": {
+        "A": "$1.100.000.000",
+        "B": "$880.000.000",
+        "C": "$680.000.000",
+        "D": "$500.000.000"
+      },
+      "correct": "C",
+      "justification": "FCF = EBITDA − Impuestos − Variación en capital de trabajo − CAPEX = $1.280M − $180M − $120M − $300M = $680M. El FCF representa el efectivo real disponible después de cubrir obligaciones tributarias, necesidades operativas de capital de trabajo e inversiones. El aumento de cartera por cobrar ($120M) consume caja aunque contablemente sea un activo, y el CAPEX ($300M) es una salida de inversión real. El FCF de $680M es el efectivo que la Clínica Somer puede destinar a servicio de deuda, distribución de utilidades o reinversión estratégica —muy distinto del EBITDA de $1.280M."
+    },
+    {
+      "id": 155,
+      "module": "Módulo 9 – Análisis financiero y estados financieros",
+      "question": "El balance de la Clínica Somer muestra activos totales de $18.000.000.000 y patrimonio de $10.800.000.000. ¿Cuál es el nivel de endeudamiento y el ratio deuda/patrimonio, y cómo se interpretan para el sector salud?",
+      "options": {
+        "A": "Endeudamiento = 60%; ratio D/P = 1,5 — nivel alto con riesgo financiero elevado para una IPS",
+        "B": "Endeudamiento = 40%; ratio D/P = 0,67 — nivel conservador; el 60% de los activos están respaldados con patrimonio propio",
+        "C": "Endeudamiento = 60%; ratio D/P = 0,67 — moderado pero con tendencia de alerta en el sector",
+        "D": "Endeudamiento = 40%; ratio D/P = 1,67 — nivel moderado pero el ratio indica dependencia de terceros"
+      },
+      "correct": "B",
+      "justification": "Pasivos = $18.000M − $10.800M = $7.200M. Endeudamiento = $7.200M ÷ $18.000M × 100 = 40%. Ratio D/P = $7.200M ÷ $10.800M = 0,67. Para el sector salud en Colombia, un endeudamiento del 40% es conservador y saludable: el 60% de los activos está financiado con recursos propios, lo que reduce la dependencia de crédito externo y da solidez ante variaciones en el flujo de caja —frecuentes en IPS por las demoras de pago de EPS (60–120 días)—. El nivel de alerta para IPS suele situarse alrededor del 60–65% de endeudamiento. La opción D confunde el ratio D/P con el multiplicador del patrimonio (Activos/Patrimonio = 1,67)."
     }
   ]
 }
